@@ -1,0 +1,19 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: study_sheets
+      MYSQL_USER: study_sheets
+      MYSQL_PASSWORD: study_sheets_dev
+      MYSQL_ROOT_PASSWORD: root_dev_only
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+volumes:
+  mysql_data:
