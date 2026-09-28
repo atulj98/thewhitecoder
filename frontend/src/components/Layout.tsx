@@ -1,4 +1,3 @@
-import { BookOpenText } from "lucide-react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -19,13 +18,16 @@ export default function Layout() {
       </a>
       <header className="site-header">
         <div className="container header-inner">
-          <Link className="brand" to="/" aria-label="Study Sheets home">
+          <Link className="brand" to="/" aria-label="The White Coder home">
             <span className="brand-mark" aria-hidden="true">
-              <BookOpenText size={22} />
+              <img src="/logo.svg" alt="" width="42" height="42" />
             </span>
-            <span>
-              study<span className="brand-accent">sheets</span>
-              <span className="period">.</span>
+            <span className="brand-wordmark">
+              <span className="brand-prefix">THE</span>
+              <span className="brand-name">
+                White <strong>Coder</strong>
+                <span className="period">.</span>
+              </span>
             </span>
           </Link>
           <nav aria-label="Primary navigation">
@@ -39,7 +41,7 @@ export default function Layout() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <span className="footer-brand">
-            studysheets<span className="period">.</span>
+            The White Coder<span className="period">.</span>
           </span>
           <span>Build understanding, one topic at a time.</span>
         </div>

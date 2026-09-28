@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>The White Coder</title>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="#F7FCFA"/>
+  <rect x="1" y="1" width="62" height="62" rx="16" stroke="#BCEDE0" stroke-width="2"/>
+  <path d="M13 21 8 32l5 11" stroke="#19A994" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m19 21 6 23 7-14 7 14 6-23" stroke="#0D2035" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m51 21 5 11-5 11" stroke="#19A994" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

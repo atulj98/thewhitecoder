@@ -85,21 +85,41 @@ main {
 }
 .brand {
   gap: 11px;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.055em;
 }
 .brand-mark {
-  height: 37px;
-  width: 37px;
+  height: 42px;
+  width: 42px;
   display: grid;
   place-items: center;
-  background: #21bca8;
-  color: #072638;
-  border-radius: 10px;
+  flex: none;
 }
-.brand-accent {
+.brand-mark img {
+  display: block;
+  height: 42px;
+  width: 42px;
+}
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.brand-prefix {
   color: #a5eadb;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.23em;
+  margin-bottom: 5px;
+}
+.brand-name {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+.brand-name strong {
+  color: #a5eadb;
+  font-weight: 800;
 }
 .period {
   color: #20b9a9;
