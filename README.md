@@ -1,6 +1,6 @@
-# Study Sheets
+# The White Coder - Study Sheets
 
-A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP**. This repository is the first working slice: a React catalog backed by a FastAPI/MySQL API. Sheet content is deliberately not invented; each sheet shows a preparation state until its source PDF has been reviewed and published.
+A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. This repository is the first working slice: a React catalog backed by a FastAPI/MySQL API. Sheet content is deliberately not invented; each sheet shows a preparation state until its source PDF has been reviewed and published.
 
 ## Stack
 
@@ -14,6 +14,8 @@ A public, step-by-step learning hub for **DSA, Computer Networks, Operating Syst
 - Python 3.11+
 - Docker Desktop with Compose, **or** a local MySQL 8.4 server configured with the database and user in `docker-compose.yml`
 
+Check `python3 --version` before creating the backend virtual environment. On a Mac where `python3` is older than 3.11, install a newer Python first (for example, `brew install python@3.12`) and create the environment with `python3.12 -m venv .venv` instead. A virtual environment keeps the version of Python that created it.
+
 ## Run locally
 
 From the repository root:
@@ -24,6 +26,8 @@ cp .env.example backend/.env
 cd backend
 python3 -m venv .venv
 source .venv/bin/activate
+python --version  # Must be 3.11 or newer
+python -m pip install --upgrade pip setuptools wheel
 python -m pip install -e '.[dev]'
 alembic upgrade head
 uvicorn app.main:app --reload --port 8000
@@ -39,7 +43,15 @@ npm run dev
 
 Open **http://localhost:5173**. Vite forwards `/api` calls to FastAPI at `127.0.0.1:8000`. The API docs are at **http://127.0.0.1:8000/docs**. The health endpoints are `/api/v1/health/live` and `/api/v1/health/ready`.
 
+## GitHub Pages preview
+
+The workflow in `.github/workflows/deploy-pages.yml` builds `frontend/` and deploys `frontend/dist` when `main` is pushed. In the repository's **Settings → Pages**, select **GitHub Actions** as the source. For `https://atulj98.github.io/thewhitecoder/`, the Pages build uses `/thewhitecoder/` as its asset path and hash-based links for subject pages.
+
+This is a static preview with the five subject cards. The source PDFs have not been imported, so each subject is marked as coming soon. GitHub Pages cannot run the FastAPI backend or MySQL. The local development build still reads the API. A production API and database require separate hosting; then configure the frontend's production API URL and replace the preview mode.
+
 If port 3306 is already in use, stop the other MySQL service or change both the Compose host port and `DATABASE_URL`. The passwords in Compose and `.env.example` are strictly for local development; provision separate credentials for production.
+
+If an editable install says `setup.py` or `setup.cfg` is missing despite finding `pyproject.toml`, check the Python and pip versions inside `(.venv)`. Older pip releases do not support the editable build interface used here. Upgrade pip in the virtual environment using the command above; if Python is below 3.11, recreate `.venv` with Python 3.11+ first. `alembic` becomes available only after the project installation succeeds.
 
 ## Checks
 
