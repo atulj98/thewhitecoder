@@ -1,6 +1,6 @@
 # The White Coder - Study Sheets
 
-A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. This repository is the first working slice: a React catalog backed by a FastAPI/MySQL API. Sheet content is deliberately not invented; each sheet shows a preparation state until its source PDF has been reviewed and published.
+A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet now contains a 23-step roadmap based on the supplied topic order, with 95 subtopics and 190 concept/practice tasks. External problem links will be added when the source PDFs are available. The other four subjects remain in preparation.
 
 ## Stack
 
@@ -49,9 +49,11 @@ The workflow in `.github/workflows/deploy-pages.yml` builds `frontend/` and depl
 
 The five subject cards appear before content is ready. Reviewed files in `content/published/` are bundled into the Pages build as step-by-step sheets. Drafts in `content/drafts/` are never bundled. GitHub Pages cannot run FastAPI or MySQL; the local development build still reads the API. Authentication and server-backed progress will require separately hosted backend and database services.
 
+To preview the published Pages content locally without MySQL, run `VITE_STATIC_SITE=1 npm run dev` from `frontend/` and open **http://localhost:5173/thewhitecoder/**.
+
 ## Prepare and publish sheet content
 
-The source PDFs are needed to create the real sheets. Transcribe one PDF at a time into `content/drafts/<slug>.json` (`dsa`, `cn`, `os`, `dbms`, or `oops`). Draft JSON files are ignored by Git; reviewed published copies are committed. Preserve the PDF's actual ordering, titles, and links; do not invent missing lessons. A minimal **shape example**, with placeholder titles to replace, is:
+The DSA roadmap in `content/published/dsa.json` is based on the supplied outline. The source PDFs are still needed for curated question titles and links. For later sheets, transcribe one PDF at a time into `content/drafts/<slug>.json` (`dsa`, `cn`, `os`, `dbms`, or `oops`). Draft JSON files are ignored by Git; reviewed published copies are committed. Preserve the PDF's actual ordering, titles, and links. A minimal **shape example**, with placeholder titles to replace, is:
 
 ```json
 {
@@ -98,6 +100,8 @@ python -m app.content_cli publish-db dsa 1
 
 The database import does not expose a draft through the public API. Publishing a new revision switches the public pointer atomically and retains older revisions. The Pages and API publication commands are separate because they run on different hosts.
 
+To show the published DSA roadmap through your **local MySQL API**, run `python -m app.content_cli import-draft ../content/published/dsa.json` from `backend/`, then run `python -m app.content_cli publish-db dsa <printed-revision-number>`. Refresh the frontend after publication.
+
 If port 3306 is already in use, stop the other MySQL service or change both the Compose host port and `DATABASE_URL`. The passwords in Compose and `.env.example` are strictly for local development; provision separate credentials for production.
 
 If an editable install says `setup.py` or `setup.cfg` is missing despite finding `pyproject.toml`, check the Python and pip versions inside `(.venv)`. Older pip releases do not support the editable build interface used here. Upgrade pip in the virtual environment using the command above; if Python is below 3.11, recreate `.venv` with Python 3.11+ first. `alembic` becomes available only after the project installation succeeds.
@@ -117,7 +121,7 @@ The database-backed test requires `docker compose up -d db` and `alembic upgrade
 
 ## Next milestones
 
-1. Map the five source PDFs into reviewed steps, topics, items, and links.
+1. Review the DSA roadmap and attach curated problems and links from the DSA PDF; then map the remaining four PDFs.
 2. Add a browser-based admin editor and review workflow after the first PDF has established the content shape.
 3. Implement manual sign-up plus Google and Facebook login, using revocable server sessions.
 4. Add per-user progress and bookmarks, then complete accessibility and deployment checks.

@@ -1,0 +1,1854 @@
+{
+  "manifest_version": 1,
+  "slug": "dsa",
+  "steps": [
+    {
+      "stable_key": "basic-programming-knowledge-required-for-dsa",
+      "title": "Basic Programming Knowledge Required for Starting the Data Structures and Algorithms Journey",
+      "topics": [
+        {
+          "stable_key": "language-syntax-and-input-output",
+          "title": "Language syntax and input/output",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Variables, types, operators, conditionals, loops, and reading input",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Read several values and compute a result with clear edge-case handling",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "functions-and-program-structure",
+          "title": "Functions and program structure",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Functions, parameters, return values, scope, and reusable helpers",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Split a small program into parsing, computation, and output functions",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "basic-collections-and-memory",
+          "title": "Basic collections and memory",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Arrays, strings, indexed access, references, and common library containers",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Traverse, update, and compare collections without out-of-bounds access",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "complexity-and-debugging",
+          "title": "Complexity and debugging",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Time and space complexity, dry runs, assertions, and boundary cases",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Estimate the cost of nested loops and test empty, single-element, and large inputs",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "patterns",
+      "title": "Patterns",
+      "topics": [
+        {
+          "stable_key": "nested-loop-reasoning",
+          "title": "Nested-loop reasoning",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Relate row and column indices to the characters printed",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Print solid square and right-triangle patterns",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "spaces-and-alignment",
+          "title": "Spaces and alignment",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Compute leading spaces and visible symbols for each row",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Print an aligned pyramid and an inverted pyramid",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "number-and-character-patterns",
+          "title": "Number and character patterns",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Generate values from row and column relationships",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Print increasing number triangles and alphabet patterns",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "symmetry-and-boundaries",
+          "title": "Symmetry and boundaries",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use mirrored positions and row-dependent limits",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Print a diamond and a hollow rectangle",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "arrays",
+      "title": "Arrays",
+      "topics": [
+        {
+          "stable_key": "traversal-and-in-place-updates",
+          "title": "Traversal and in-place updates",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Indexing, reversal, rotation, and two-pass scans",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Rotate an array and move zeroes while preserving relative order",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "prefix-and-suffix-techniques",
+          "title": "Prefix and suffix techniques",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Prefix sums, suffix products, and range calculations",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Answer range-sum queries and build product-except-self",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "subarrays-and-optimal-sums",
+          "title": "Subarrays and optimal sums",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Contiguous ranges, Kadane's algorithm, and running minima",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the maximum subarray sum and a maximum-sum circular subarray",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "intervals-and-matrices",
+          "title": "Intervals and matrices",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Merging intervals and row-column traversal",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Merge overlapping intervals and rotate a square matrix",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "string-basic-medium",
+      "title": "String (Basic + Medium)",
+      "topics": [
+        {
+          "stable_key": "traversal-and-transformations",
+          "title": "Traversal and transformations",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Character iteration, normalization, and building strings efficiently",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Reverse words and normalize a string for comparison",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "palindromes-and-anagrams",
+          "title": "Palindromes and anagrams",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Frequency counts and inward-moving pointers",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Check a palindrome and group words by anagram signature",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "substrings-and-parsing",
+          "title": "Substrings and parsing",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Indices, boundaries, tokenization, and basic substring search",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the first occurrence of a pattern and parse a signed integer",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "string-construction",
+          "title": "String construction",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Run-length encoding, repeated patterns, and character counts",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compress repeated characters and compare two strings after backspaces",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "hashing",
+      "title": "Hashing",
+      "topics": [
+        {
+          "stable_key": "sets-and-frequency-maps",
+          "title": "Sets and frequency maps",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Hash sets, hash maps, counting, and average-case lookup",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Detect duplicates and find the first non-repeating element",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "pairs-and-complements",
+          "title": "Pairs and complements",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Store previously seen values for one-pass pair searches",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Solve pair-sum and count pairs with a target sum",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "prefix-sums-with-hashing",
+          "title": "Prefix sums with hashing",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Map prefix values to counts or earliest indices",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count subarrays with a target sum and find the longest zero-sum subarray",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "grouping-and-state-keys",
+          "title": "Grouping and state keys",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Design stable keys for grouping and repeated-state detection",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Group anagrams and identify repeated prefix states",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "sorting",
+      "title": "Sorting",
+      "topics": [
+        {
+          "stable_key": "ordering-fundamentals",
+          "title": "Ordering fundamentals",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Comparison rules, stability, and when sorting changes an approach",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Sort records by two fields with a custom tie-breaker",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "elementary-sorts",
+          "title": "Elementary sorts",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Insertion and selection sort as tools for reasoning about invariants",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement insertion sort and explain its best and worst cases",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "divide-and-conquer-sorts",
+          "title": "Divide-and-conquer sorts",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Merge sort, quicksort, partitioning, and recursion depth",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement merge sort and a partition-based sort",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "sorting-applications",
+          "title": "Sorting applications",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Sorted scans, inversion counting, and interval processing",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count inversions and find the minimum meeting rooms",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "binary-search",
+      "title": "Binary Search",
+      "topics": [
+        {
+          "stable_key": "search-invariants",
+          "title": "Search invariants",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Monotonic ranges and inclusive versus half-open bounds",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement lower bound and upper bound without off-by-one errors",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "first-and-last-occurrence",
+          "title": "First and last occurrence",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Boundary searches over duplicate values",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the first and last position of a target in a sorted array",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "search-on-the-answer",
+          "title": "Search on the answer",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Turn an optimization problem into a monotonic feasibility check",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find a minimum feasible capacity or rate",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "modified-search-spaces",
+          "title": "Modified search spaces",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Rotated arrays, peaks, and row-sorted matrices",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Search a rotated sorted array and locate a peak element",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "two-pointers-sliding-window",
+      "title": "Two Pointers + Sliding Window",
+      "topics": [
+        {
+          "stable_key": "opposite-direction-pointers",
+          "title": "Opposite-direction pointers",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use sorted order and pairwise movement to reduce search",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find a pair with a target sum and remove duplicate pairs",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "same-direction-pointers",
+          "title": "Same-direction pointers",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Maintain a write boundary while scanning",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Remove duplicates in place and merge two sorted sequences",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "fixed-size-windows",
+          "title": "Fixed-size windows",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Update window state as one element enters and one leaves",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the maximum sum of every length-k window",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "variable-size-windows",
+          "title": "Variable-size windows",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Maintain a validity condition while expanding and shrinking",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the longest substring with at most k distinct characters",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "counting-valid-windows",
+          "title": "Counting valid windows",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Count subarrays using at-most counts and derive exactly-k counts",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count subarrays with exactly k distinct values",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "recursion-backtracking",
+      "title": "Recursion + Backtracking",
+      "topics": [
+        {
+          "stable_key": "recursive-thinking",
+          "title": "Recursive thinking",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Base cases, shrinking inputs, and call-stack state",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Trace and implement factorial, power, and recursive array traversal",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "subsets-and-combinations",
+          "title": "Subsets and combinations",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Choose-or-skip decisions and duplicate handling",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Generate subsets and unique combinations that meet a target",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "permutations",
+          "title": "Permutations",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Used-element state, swaps, and pruning duplicate branches",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Generate distinct permutations of a multiset",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "constraint-search",
+          "title": "Constraint search",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Make a choice, recurse, and undo state safely",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Solve a grid word search and the N-Queens problem",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "linked-list",
+      "title": "Linked List",
+      "topics": [
+        {
+          "stable_key": "nodes-and-traversal",
+          "title": "Nodes and traversal",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Singly and doubly linked nodes, insertion, and deletion",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Build a list and insert or remove at a given position",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "pointer-rewiring",
+          "title": "Pointer rewiring",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Iterative and recursive reversal with saved next pointers",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Reverse a full list and a bounded sublist",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "fast-and-slow-pointers",
+          "title": "Fast and slow pointers",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Middle nodes, cycles, and finding a cycle entry",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Detect a cycle and find the middle in one traversal",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "merging-and-restructuring",
+          "title": "Merging and restructuring",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Dummy heads, sorted merges, and k-way merging",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Merge two sorted lists and partition a list around a value",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "stack-queue",
+      "title": "Stack + Queue",
+      "topics": [
+        {
+          "stable_key": "stack-and-queue-operations",
+          "title": "Stack and queue operations",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "LIFO/FIFO semantics, deque usage, and amortized operations",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement a queue with two stacks and a stack with two queues",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "balanced-expressions",
+          "title": "Balanced expressions",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Matching delimiters and stack-based parsing",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Validate bracket sequences and evaluate a postfix expression",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "monotonic-stacks",
+          "title": "Monotonic stacks",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Maintain increasing or decreasing candidates",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find next greater elements and largest rectangle in a histogram",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "monotonic-queues",
+          "title": "Monotonic queues",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Maintain window extrema in a deque",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compute the maximum for each sliding window",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "bit-manipulation",
+      "title": "Bit Manipulation",
+      "topics": [
+        {
+          "stable_key": "bitwise-operators",
+          "title": "Bitwise operators",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "AND, OR, XOR, shifts, signedness, and binary representation",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Test, set, clear, and toggle a selected bit",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "masks-and-subsets",
+          "title": "Masks and subsets",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Represent sets with masks and enumerate submasks",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Generate all subsets with a bitmask",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "xor-properties",
+          "title": "XOR properties",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Cancellation, parity, and finding unique values",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the single non-duplicated number and two unique numbers",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "bit-counting",
+          "title": "Bit counting",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Power-of-two checks, low-bit extraction, and population count",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count set bits for every number from zero through n",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "greedy-algorithms",
+      "title": "Greedy Algorithms",
+      "topics": [
+        {
+          "stable_key": "greedy-choice-reasoning",
+          "title": "Greedy-choice reasoning",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Identify a local choice and justify it with an exchange argument",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Explain why an interval-choice rule is safe",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "intervals-and-scheduling",
+          "title": "Intervals and scheduling",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Sort by finish time, overlap constraints, and sweep choices",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Select the maximum non-overlapping intervals",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "resource-allocation",
+          "title": "Resource allocation",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Sort or use a heap to serve the most constrained choice",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Assign cookies or schedule jobs with deadlines",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "counterexamples",
+          "title": "Counterexamples",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Test tempting heuristics against small adversarial inputs",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compare a greedy coin strategy with an optimal solution",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "binary-tree",
+      "title": "Binary Tree",
+      "topics": [
+        {
+          "stable_key": "tree-traversal",
+          "title": "Tree traversal",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Recursive and iterative preorder, inorder, postorder, and level order",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement all four traversals and compare their output",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "depth-and-structural-properties",
+          "title": "Depth and structural properties",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Height, balance, diameter, and path aggregation",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compute tree diameter and check whether a tree is balanced",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "ancestor-and-path-queries",
+          "title": "Ancestor and path queries",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Lowest common ancestor and root-to-node path reasoning",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the lowest common ancestor of two nodes",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "tree-construction-and-views",
+          "title": "Tree construction and views",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Rebuild trees from traversal sequences and perform breadth-first views",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Construct a tree from preorder and inorder traversals",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "binary-search-tree",
+      "title": "Binary Search Tree",
+      "topics": [
+        {
+          "stable_key": "ordering-invariant",
+          "title": "Ordering invariant",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "BST property and expected versus worst-case height",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Search, insert, and validate a BST",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "deletion-and-neighbors",
+          "title": "Deletion and neighbors",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Deletion cases, predecessor, and successor",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Delete a key and find its inorder successor",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "ordered-queries",
+          "title": "Ordered queries",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use inorder order for ranks and range searches",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the kth smallest value and list keys in a range",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "bst-iterators",
+          "title": "BST iterators",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use a stack for incremental inorder traversal",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement a next-element iterator with space proportional to height",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "heaps",
+      "title": "Heaps",
+      "topics": [
+        {
+          "stable_key": "priority-queue-fundamentals",
+          "title": "Priority queue fundamentals",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Min-heaps, max-heaps, push/pop, and heapify",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement heap operations or trace a heap construction",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "top-k-selection",
+          "title": "Top-k selection",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Keep a bounded heap instead of sorting the full input",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the kth largest value and top-k frequent elements",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "merging-ordered-streams",
+          "title": "Merging ordered streams",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Track the smallest current element from each stream",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Merge k sorted lists or arrays",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "two-heap-techniques",
+          "title": "Two-heap techniques",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Balance lower and upper halves as values arrive",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Maintain the median of a running stream",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "graph",
+      "title": "Graph",
+      "topics": [
+        {
+          "stable_key": "representation-and-traversal",
+          "title": "Representation and traversal",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Adjacency lists, directed versus undirected edges, BFS, and DFS",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count connected components and traverse a grid",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "cycle-detection-and-ordering",
+          "title": "Cycle detection and ordering",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Detect cycles and topologically order a directed acyclic graph",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Determine whether courses can be completed",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "shortest-paths",
+          "title": "Shortest paths",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Choose BFS for unit weights and Dijkstra for nonnegative weights",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compute shortest distances with the appropriate algorithm",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "disjoint-sets-and-spanning-trees",
+          "title": "Disjoint sets and spanning trees",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Path compression, union by size, Kruskal, and Prim",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Build a minimum spanning tree and answer connectivity queries",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "advanced-connectivity",
+          "title": "Advanced connectivity",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Strongly connected components, bridges, and articulation points",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Identify bridges and strongly connected components",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "string-hard",
+      "title": "String (Hard)",
+      "topics": [
+        {
+          "stable_key": "prefix-function-matching",
+          "title": "Prefix-function matching",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Failure links and Knuth-Morris-Pratt pattern matching",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find every occurrence of a pattern in linear time",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "z-algorithm",
+          "title": "Z algorithm",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Reuse the rightmost matching interval to compute Z values",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find pattern matches with a combined pattern-text string",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "rolling-hash",
+          "title": "Rolling hash",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Prefix hashes, substring comparisons, and collision awareness",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compare many substrings with a double-hash strategy",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "advanced-palindrome-search",
+          "title": "Advanced palindrome search",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Expand around centers and understand Manacher's linear-time radius method",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find a longest palindromic substring",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "tries",
+      "title": "Tries",
+      "topics": [
+        {
+          "stable_key": "trie-construction",
+          "title": "Trie construction",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Prefix nodes, terminal markers, insertion, and search",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement insert, exact search, and starts-with",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "prefix-queries",
+          "title": "Prefix queries",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Traverse shared prefixes and count stored words",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Build autocomplete for a small dictionary",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "bitwise-tries",
+          "title": "Bitwise tries",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Branch by bit position for XOR optimization",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the maximum XOR of two numbers",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "trie-search-with-pruning",
+          "title": "Trie search with pruning",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use trie edges to avoid exploring impossible strings",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find dictionary words in a character grid",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "segment-tree-lazy-tree",
+      "title": "Segment Tree + Lazy Tree",
+      "topics": [
+        {
+          "stable_key": "range-queries-and-point-updates",
+          "title": "Range queries and point updates",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Build a segment tree and combine results over intervals",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Support range-sum queries with point updates",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "generic-aggregation",
+          "title": "Generic aggregation",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use sum, minimum, maximum, or a custom associative merge",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement range-minimum query with point updates",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "lazy-propagation",
+          "title": "Lazy propagation",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Defer range updates and push pending changes before descending",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Support range-add updates with range-sum queries",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "indexing-and-boundaries",
+          "title": "Indexing and boundaries",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Choose inclusive or half-open ranges consistently",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Test single-element, full-range, and overlapping updates",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "fenwick-tree",
+      "title": "Fenwick Tree",
+      "topics": [
+        {
+          "stable_key": "low-bit-structure",
+          "title": "Low-bit structure",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use the least significant set bit to move through partial sums",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Implement point updates and prefix-sum queries",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "range-sums",
+          "title": "Range sums",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Subtract two prefix sums and manage one-based indexing",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Answer dynamic range-sum queries",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "range-updates",
+          "title": "Range updates",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use difference arrays or paired Fenwick trees",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Support range additions and point queries",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "counting-applications",
+          "title": "Counting applications",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Combine coordinate compression with frequency updates",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count inversions in an array",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "sweep-line-algorithms",
+      "title": "Sweep Line Algorithms",
+      "topics": [
+        {
+          "stable_key": "event-modeling",
+          "title": "Event modeling",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Convert interval endpoints into ordered start and end events",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Find the maximum number of overlapping intervals",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "tie-breaking-rules",
+          "title": "Tie-breaking rules",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Decide whether touching endpoints overlap before ordering events",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compare results for closed and half-open intervals",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "active-sets",
+          "title": "Active sets",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Maintain currently intersecting objects in a set or heap",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Compute the minimum number of rooms for meetings",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "coordinate-compression",
+          "title": "Coordinate compression",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Map large coordinates to compact ordered indices",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Process many range events with compressed endpoints",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "combinatorics",
+      "title": "Combinatorics",
+      "topics": [
+        {
+          "stable_key": "counting-principles",
+          "title": "Counting principles",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Product and sum rules, permutations, and combinations",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count arrangements with and without repeated elements",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "binomial-coefficients",
+          "title": "Binomial coefficients",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Pascal's triangle, factorial tables, and modular inverses",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Answer many n-choose-r queries modulo a prime",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "inclusion-exclusion",
+          "title": "Inclusion-exclusion",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Correct double-counting across overlapping sets",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count numbers divisible by at least one selected divisor",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "distributing-objects",
+          "title": "Distributing objects",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Stars and bars and upper-bound constraints",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count ways to distribute identical items into groups",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "recurrence-and-proof",
+          "title": "Recurrence and proof",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Derive a recurrence and check it on small cases",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Count lattice paths with blocked positions",
+              "kind": "practice",
+              "source_url": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
