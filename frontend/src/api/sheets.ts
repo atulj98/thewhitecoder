@@ -26,7 +26,16 @@ export interface SheetDetail extends SheetSummary {
   steps: SheetStep[];
 }
 
-// GitHub Pages hosts a static preview until the FastAPI service is deployed.
+// Only explicitly staged, reviewed files in content/published reach GitHub Pages.
+const publishedFiles = import.meta.glob<{ slug: string; steps: SheetStep[] }>(
+  "../../../content/published/*.json",
+  { eager: true, import: "default" },
+);
+const publishedBySlug = new Map(
+  Object.values(publishedFiles).map((manifest) => [manifest.slug, manifest]),
+);
+
+// Subject metadata remains available before the source PDFs have been reviewed.
 const previewSheets: SheetSummary[] = [
   {
     slug: "dsa",
@@ -80,16 +89,23 @@ async function getJson<T>(path: string): Promise<T> {
 }
 export const getSheets = () =>
   import.meta.env.VITE_STATIC_SITE === "1"
-    ? Promise.resolve(previewSheets)
+    ? Promise.resolve(
+        previewSheets.map((sheet) => ({
+          ...sheet,
+          is_published: publishedBySlug.has(sheet.slug),
+        })),
+      )
     : getJson<SheetSummary[]>("/sheets");
 export const getSheet = (slug: string) => {
   if (import.meta.env.VITE_STATIC_SITE === "1") {
     const sheet = previewSheets.find((item) => item.slug === slug);
+    const published = publishedBySlug.get(slug);
     return sheet
       ? Promise.resolve<SheetDetail>({
           ...sheet,
+          is_published: Boolean(published),
           revision_number: null,
-          steps: [],
+          steps: published?.steps ?? [],
         })
       : Promise.reject(new Error("Sheet not found"));
   }

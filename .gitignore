@@ -13,3 +13,4 @@ frontend/dist/
 frontend/.env
 frontend/.env.*
 !frontend/.env.example
+content/drafts/*.json
