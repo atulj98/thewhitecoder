@@ -1,21 +1,32 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
+import { scrollToSheets } from "../lib/scroll";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, state } = useLocation();
   useEffect(() => {
+    if (pathname === "/" && state?.scrollToSheets) {
+      const frame = requestAnimationFrame(scrollToSheets);
+      return () => cancelAnimationFrame(frame);
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, state]);
   return null;
 }
 
 export default function Layout() {
+  const location = useLocation();
   return (
     <div className="site-shell">
       <ScrollToTop />
-      <a className="skip-link" href="#main-content">
+      <button
+        className="skip-link"
+        type="button"
+        onClick={() => document.getElementById("main-content")?.focus()}
+      >
         Skip to content
-      </a>
+      </button>
       <header className="site-header">
         <div className="container header-inner">
           <Link className="brand" to="/" aria-label="The White Coder home">
@@ -35,12 +46,31 @@ export default function Layout() {
               </span>
             </span>
           </Link>
-          <nav aria-label="Primary navigation">
-            <Link to="/">Explore sheets</Link>
-          </nav>
+          <div className="header-actions">
+            <nav aria-label="Primary navigation">
+              {location.pathname === "/" ? (
+                <button
+                  className="nav-link"
+                  type="button"
+                  onClick={scrollToSheets}
+                >
+                  Explore sheets
+                </button>
+              ) : (
+                <Link
+                  className="nav-link"
+                  to="/"
+                  state={{ scrollToSheets: true }}
+                >
+                  Explore sheets
+                </Link>
+              )}
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <Outlet />
       </main>
       <footer className="site-footer">

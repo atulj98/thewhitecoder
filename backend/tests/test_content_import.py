@@ -2,12 +2,13 @@ import json
 import uuid
 
 import pytest
+from fastapi import HTTPException
 from pydantic import ValidationError
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session
 from sqlalchemy.pool import StaticPool
 
-from app.api.sheets import get_sheet
+from app.api.sheets import get_sheet, list_sheets
 from app.content_import import import_draft, publish_revision
 from app.content_manifest import SheetManifest
 from app.db.base import Base
@@ -80,10 +81,14 @@ def test_import_is_private_until_published_and_keeps_older_revisions():
 
         revision = import_draft(db, SheetManifest.model_validate(manifest_data()))
         assert revision == 1
-        assert get_sheet("dsa", db).steps == []
+        assert list_sheets(db) == []
+        with pytest.raises(HTTPException) as exc_info:
+            get_sheet("dsa", db)
+        assert exc_info.value.status_code == 404
         db.rollback()  # End the read-only transaction before the next operator command.
 
         publish_revision(db, "dsa", revision)
+        assert [sheet.slug for sheet in list_sheets(db)] == ["dsa"]
         visible = get_sheet("dsa", db)
         assert visible.revision_number == 1
         assert visible.steps[0].topics[0].items[0].title == "Resource from source PDF"

@@ -36,7 +36,7 @@ const publishedBySlug = new Map(
   Object.values(publishedFiles).map((manifest) => [manifest.slug, manifest]),
 );
 
-// Subject metadata remains available before the source PDFs have been reviewed.
+// Keep future subjects available to publish without exposing them in the catalog.
 const previewSheets: SheetSummary[] = [
   {
     slug: "dsa",
@@ -91,22 +91,21 @@ async function getJson<T>(path: string): Promise<T> {
 export const getSheets = () =>
   import.meta.env.VITE_STATIC_SITE === "1"
     ? Promise.resolve(
-        previewSheets.map((sheet) => ({
-          ...sheet,
-          is_published: publishedBySlug.has(sheet.slug),
-        })),
+        previewSheets
+          .filter((sheet) => publishedBySlug.has(sheet.slug))
+          .map((sheet) => ({ ...sheet, is_published: true })),
       )
     : getJson<SheetSummary[]>("/sheets");
 export const getSheet = (slug: string) => {
   if (import.meta.env.VITE_STATIC_SITE === "1") {
     const sheet = previewSheets.find((item) => item.slug === slug);
     const published = publishedBySlug.get(slug);
-    return sheet
+    return sheet && published
       ? Promise.resolve<SheetDetail>({
           ...sheet,
-          is_published: Boolean(published),
+          is_published: true,
           revision_number: null,
-          steps: published?.steps ?? [],
+          steps: published.steps,
         })
       : Promise.reject(new Error("Sheet not found"));
   }

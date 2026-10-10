@@ -115,7 +115,7 @@ export default function SheetPage() {
                   the sheet has been reviewed and published.
                 </p>
                 <Link className="primary-button dark" to="/">
-                  Explore other subjects <ArrowLeft size={17} />
+                  Back to available sheets <ArrowLeft size={17} />
                 </Link>
               </div>
             ) : (

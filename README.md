@@ -45,11 +45,20 @@ Open **http://localhost:5173**. Vite forwards `/api` calls to FastAPI at `127.0.
 
 ## GitHub Pages
 
-The workflow in `.github/workflows/deploy-pages.yml` builds `frontend/` and deploys `frontend/dist` when `main` is pushed. In the repository's **Settings → Pages**, select **GitHub Actions** as the source. For `https://atulj98.github.io/thewhitecoder/`, the Pages build uses `/thewhitecoder/` as its asset path and hash-based links for subject pages.
+The workflow in `.github/workflows/deploy-pages.yml` validates the published content, runs frontend lint and format checks, audits dependencies for high-severity issues, builds `frontend/`, and deploys `frontend/dist` when `main` is pushed. In the repository's **Settings → Pages**, select **GitHub Actions** as the source. The static build uses relative asset paths, so the same artifact works at `https://atulj98.github.io/thewhitecoder/` and at the custom domain root. Sheet links use hash-based routing because GitHub Pages does not provide an SPA route rewrite.
 
-The five subject cards appear before content is ready. Reviewed files in `content/published/` are bundled into the Pages build as step-by-step sheets. Drafts in `content/drafts/` are never bundled. GitHub Pages cannot run FastAPI or MySQL; the local development build still reads the API. Authentication and server-backed progress will require separately hosted backend and database services.
+Only published subjects appear in the public catalog and open through direct sheet links. DSA is currently the only published sheet; CN, OS, DBMS, and OOP metadata remain available for later publication. Reviewed files in `content/published/` are bundled into the Pages build as step-by-step sheets. Drafts in `content/drafts/` are never bundled. GitHub Pages cannot run FastAPI or MySQL; the local development build still reads the API. Authentication and server-backed progress will require separately hosted backend and database services.
 
-To preview the published Pages content locally without MySQL, run `VITE_STATIC_SITE=1 npm run dev` from `frontend/` and open **http://localhost:5173/thewhitecoder/**.
+To preview the published Pages content locally without MySQL, run `VITE_STATIC_SITE=1 npm run dev` from `frontend/` and open the local URL Vite prints (usually **http://localhost:5173/**). The DSA route is `/#/sheets/dsa`. Use the light/dark toggle in the header to test both themes; the choice is saved on that device.
+
+### Launch on thewhitecoder.com
+
+1. Build and review the static site with `VITE_STATIC_SITE=1 npm run build`, then push the reviewed commit to `main`. Wait for the Pages deployment to succeed.
+2. In the repository's **Settings → Pages**, enter `thewhitecoder.com` under **Custom domain** and save it. This project uses a custom GitHub Actions workflow, so a `CNAME` file in the repository is ignored and is not needed.
+3. At the DNS provider, add these four `A` records for the root (`@`): `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`. Add a `CNAME` record for `www` pointing to `atulj98.github.io` (without `/thewhitecoder`). Remove conflicting default root or `www` records. Avoid wildcard records.
+4. Check DNS with `dig thewhitecoder.com +noall +answer -t A` and `dig www.thewhitecoder.com +noall +answer -t CNAME`. After GitHub's DNS check and certificate issuance, enable **Enforce HTTPS** in Pages settings. Check `https://thewhitecoder.com/` and `https://thewhitecoder.com/#/sheets/dsa`, plus the `www` redirect.
+
+Domain verification in GitHub Pages settings is recommended to protect ownership. DNS and HTTPS activation can take time to propagate. GitHub Pages hosts only the public static frontend; account login, user progress, the FastAPI service, and MySQL require a separate production deployment before those features can go live.
 
 ## Prepare and publish sheet content
 
@@ -101,7 +110,7 @@ python -m app.content_cli publish-db dsa 1
 
 The database import does not expose a draft through the public API. Publishing a new revision switches the public pointer atomically and retains older revisions. The Pages and API publication commands are separate because they run on different hosts.
 
-To show the linked DSA sheet through your **local MySQL API**, first run `alembic upgrade head` for the new content-link column. Then run `python -m app.content_cli import-draft ../content/published/dsa.json` from `backend/`, followed by `python -m app.content_cli publish-db dsa <printed-revision-number>`. Refresh the frontend after publication. To inspect the same sheet without MySQL, run `VITE_STATIC_SITE=1 npm run dev` in `frontend/` and open `http://localhost:5173/thewhitecoder/#/sheets/dsa`.
+To show the linked DSA sheet through your **local MySQL API**, first run `alembic upgrade head` for the new content-link column. Then run `python -m app.content_cli import-draft ../content/published/dsa.json` from `backend/`, followed by `python -m app.content_cli publish-db dsa <printed-revision-number>`. Refresh the frontend after publication. To inspect the same sheet without MySQL, run `VITE_STATIC_SITE=1 npm run dev` in `frontend/` and open `http://localhost:5173/#/sheets/dsa` (or the port Vite prints).
 
 If port 3306 is already in use, stop the other MySQL service or change both the Compose host port and `DATABASE_URL`. The passwords in Compose and `.env.example` are strictly for local development; provision separate credentials for production.
 
@@ -118,7 +127,7 @@ The database-backed test requires `docker compose up -d db` and `alembic upgrade
 
 ## Content model
 
-`sheet → published revision → ordered steps → ordered topics → ordered items`. The initial migration creates the five sheet records. Reviewed manifests can be staged for Pages or imported as private database revisions. The API returns only explicitly published revision content.
+`sheet → published revision → ordered steps → ordered topics → ordered items`. The initial migration creates the five sheet records. Reviewed manifests can be staged for Pages or imported as private database revisions. Public catalog and detail API routes expose only explicitly published sheets.
 
 ## Next milestones
 

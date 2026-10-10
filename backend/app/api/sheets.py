@@ -21,20 +21,19 @@ def to_summary(sheet: Sheet) -> SheetSummary:
 
 @router.get("", response_model=list[SheetSummary])
 def list_sheets(db: Session = Depends(get_db)) -> list[SheetSummary]:
-    sheets = db.scalars(select(Sheet).order_by(Sheet.sort_order)).all()
+    sheets = db.scalars(
+        select(Sheet).where(Sheet.published_revision_id.is_not(None)).order_by(Sheet.sort_order)
+    ).all()
     return [to_summary(sheet) for sheet in sheets]
 
 
 @router.get("/{slug}", response_model=SheetRead)
 def get_sheet(slug: str, db: Session = Depends(get_db)) -> SheetRead:
     sheet = db.scalar(select(Sheet).where(Sheet.slug == slug))
-    if sheet is None:
+    if sheet is None or sheet.published_revision_id is None:
         raise HTTPException(status_code=404, detail="Sheet not found")
 
     summary = to_summary(sheet)
-    if sheet.published_revision_id is None:
-        return SheetRead(**summary.model_dump(), revision_number=None, steps=[])
-
     revision = db.scalar(
         select(SheetRevision).where(
             SheetRevision.id == sheet.published_revision_id,

@@ -3,13 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0d2035" />
+    <meta name="theme-color" content="#f8f7f2" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%logo.svg" />
     <meta
       name="description"
-      content="The White Coder: step-by-step study sheets for DSA, computer networks, operating systems, DBMS, and OOP."
+      content="Learn data structures and algorithms from the beginning with The White Coder's guided DSA roadmap and curated practice questions."
     />
-    <title>The White Coder | Study Sheets</title>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="The White Coder | Learn DSA step by step"
+    />
+    <meta
+      property="og:description"
+      content="A clear DSA roadmap from fundamentals to advanced problem solving, with curated practice questions."
+    />
+    <title>The White Coder | Learn DSA step by step</title>
+    <script>
+      try {
+        const saved = localStorage.getItem("the-white-coder-theme");
+        const theme =
+          saved === "dark" || saved === "light"
+            ? saved
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#111c1e" : "#f8f7f2";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
