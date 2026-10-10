@@ -59,6 +59,9 @@ def import_draft(db: Session, manifest: SheetManifest) -> int:
                             source_url=str(item_data.source_url)
                             if item_data.source_url is not None
                             else None,
+                            content_url=str(item_data.content_url)
+                            if item_data.content_url is not None
+                            else None,
                             sort_order=item_order,
                         )
                     )

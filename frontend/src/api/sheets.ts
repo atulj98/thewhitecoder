@@ -10,6 +10,7 @@ export interface SheetItem {
   title: string;
   kind: string;
   source_url: string | null;
+  content_url?: string | null;
 }
 export interface SheetTopic {
   stable_key: string;

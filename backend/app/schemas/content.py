@@ -16,6 +16,7 @@ class ItemRead(BaseModel):
     title: str
     kind: str
     source_url: str | None
+    content_url: str | None
 
 
 class TopicRead(BaseModel):

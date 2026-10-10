@@ -69,6 +69,7 @@ def get_sheet(slug: str, db: Session = Depends(get_db)) -> SheetRead:
                 title=item.title,
                 kind=item.kind,
                 source_url=item.source_url,
+                content_url=item.content_url,
             )
         )
     topics_by_step: dict[str, list[TopicRead]] = {s.id: [] for s in steps}

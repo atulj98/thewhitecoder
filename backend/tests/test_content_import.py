@@ -32,6 +32,7 @@ def manifest_data() -> dict:
                                 "title": "Resource from source PDF",
                                 "kind": "resource",
                                 "source_url": "https://example.org/resource",
+                                "content_url": "https://example.org/guide",
                             }
                         ],
                     }
@@ -49,6 +50,11 @@ def test_manifest_rejects_duplicate_keys_and_unsafe_links():
 
     data = manifest_data()
     data["steps"][0]["topics"][0]["items"][0]["source_url"] = "javascript:alert(1)"
+    with pytest.raises(ValidationError):
+        SheetManifest.model_validate(data)
+
+    data = manifest_data()
+    data["steps"][0]["topics"][0]["items"][0]["content_url"] = "javascript:alert(1)"
     with pytest.raises(ValidationError):
         SheetManifest.model_validate(data)
 
@@ -81,6 +87,7 @@ def test_import_is_private_until_published_and_keeps_older_revisions():
         visible = get_sheet("dsa", db)
         assert visible.revision_number == 1
         assert visible.steps[0].topics[0].items[0].title == "Resource from source PDF"
+        assert visible.steps[0].topics[0].items[0].content_url == "https://example.org/guide"
         db.rollback()
 
         next_data = manifest_data()

@@ -20,6 +20,16 @@ function jumpToStep(stableKey: string) {
   heading?.focus({ preventScroll: true });
 }
 
+function platformName(url: string) {
+  const host = new URL(url).hostname;
+  if (host === "leetcode.com" || host === "www.leetcode.com") return "LeetCode";
+  if (host === "geeksforgeeks.org" || host === "www.geeksforgeeks.org")
+    return "GeeksforGeeks";
+  if (host === "codeforces.com" || host === "www.codeforces.com")
+    return "Codeforces";
+  return "Open question";
+}
+
 export default function SheetPage() {
   const { slug = "" } = useParams();
   const {
@@ -122,37 +132,119 @@ export default function SheetPage() {
                       <h2 id={`step-heading-${step.stable_key}`} tabIndex={-1}>
                         {step.title}
                       </h2>
-                      {step.topics.map((topic) => (
-                        <details className="topic" key={topic.stable_key}>
-                          <summary>
-                            <span>{topic.title}</span>
-                            <span>
-                              {topic.items.length}{" "}
-                              {topic.items.length === 1 ? "item" : "items"}
-                            </span>
-                          </summary>
-                          <ol>
-                            {topic.items.map((item) => (
-                              <li key={item.stable_key}>
-                                <span className="item-kind">
-                                  {item.kind.replaceAll("_", " ")}
-                                </span>
-                                <span className="item-title">{item.title}</span>
-                                {item.source_url && (
-                                  <a
-                                    href={item.source_url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={`Open ${item.title} in a new tab`}
-                                  >
-                                    <ArrowUpRight size={17} />
-                                  </a>
-                                )}
-                              </li>
-                            ))}
-                          </ol>
-                        </details>
-                      ))}
+                      {step.topics.map((topic) => {
+                        const concepts = topic.items.filter(
+                          (item) => item.kind === "concept",
+                        );
+                        const questions = topic.items.filter(
+                          (item) => item.kind === "practice",
+                        );
+                        const resources = topic.items.filter(
+                          (item) =>
+                            item.kind !== "concept" && item.kind !== "practice",
+                        );
+                        return (
+                          <details className="topic" key={topic.stable_key}>
+                            <summary>
+                              <span>{topic.title}</span>
+                              <span>
+                                {questions.length || topic.items.length}{" "}
+                                {questions.length
+                                  ? questions.length === 1
+                                    ? "question"
+                                    : "questions"
+                                  : topic.items.length === 1
+                                    ? "item"
+                                    : "items"}
+                              </span>
+                            </summary>
+                            <div className="topic-body">
+                              {concepts.map((item) => (
+                                <p
+                                  className="study-focus"
+                                  key={item.stable_key}
+                                >
+                                  <strong>Study focus</strong> {item.title}
+                                </p>
+                              ))}
+                              {questions.length > 0 && (
+                                <table className="question-table">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Question</th>
+                                      <th scope="col">Content</th>
+                                      <th scope="col">Practice</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {questions.map((item) => (
+                                      <tr key={item.stable_key}>
+                                        <td>{item.title}</td>
+                                        <td>
+                                          {item.content_url ? (
+                                            <a
+                                              href={item.content_url}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              aria-label={`Read content for ${item.title} in a new tab`}
+                                            >
+                                              Read <ArrowUpRight size={14} />
+                                            </a>
+                                          ) : (
+                                            <span
+                                              className="missing-link"
+                                              aria-label="Content link coming soon"
+                                            >
+                                              -
+                                            </span>
+                                          )}
+                                        </td>
+                                        <td>
+                                          {item.source_url ? (
+                                            <a
+                                              href={item.source_url}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              aria-label={`Solve ${item.title} on ${platformName(item.source_url)} in a new tab`}
+                                            >
+                                              {platformName(item.source_url)}{" "}
+                                              <ArrowUpRight size={14} />
+                                            </a>
+                                          ) : (
+                                            <span className="missing-link">
+                                              -
+                                            </span>
+                                          )}
+                                        </td>
+                                      </tr>
+                                    ))}
+                                  </tbody>
+                                </table>
+                              )}
+                              {resources.length > 0 && (
+                                <ul className="topic-resources">
+                                  {resources.map((item) => (
+                                    <li key={item.stable_key}>
+                                      {item.source_url ? (
+                                        <a
+                                          href={item.source_url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                        >
+                                          {item.title}{" "}
+                                          <ArrowUpRight size={14} />
+                                        </a>
+                                      ) : (
+                                        item.title
+                                      )}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          </details>
+                        );
+                      })}
                     </section>
                   ))}
                 </div>

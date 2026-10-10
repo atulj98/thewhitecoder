@@ -1,6 +1,6 @@
 # The White Coder - Study Sheets
 
-A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet now contains a 23-step roadmap based on the supplied topic order, with 95 subtopics and 190 concept/practice tasks. External problem links will be added when the source PDFs are available. The other four subjects remain in preparation.
+A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet has 23 ordered steps, 95 subtopics, and 95 curated practice questions with direct LeetCode, GeeksforGeeks, or Codeforces links. Each question's separate content link is currently shown as `-` until learning resources are added. The other four subjects remain in preparation.
 
 ## Stack
 
@@ -53,7 +53,7 @@ To preview the published Pages content locally without MySQL, run `VITE_STATIC_S
 
 ## Prepare and publish sheet content
 
-The DSA roadmap in `content/published/dsa.json` is based on the supplied outline. The source PDFs are still needed for curated question titles and links. For later sheets, transcribe one PDF at a time into `content/drafts/<slug>.json` (`dsa`, `cn`, `os`, `dbms`, or `oops`). Draft JSON files are ignored by Git; reviewed published copies are committed. Preserve the PDF's actual ordering, titles, and links. A minimal **shape example**, with placeholder titles to replace, is:
+The DSA roadmap in `content/published/dsa.json` follows the supplied topic outline. Practice questions have been independently curated; they have not yet been matched to a source PDF. For later sheets, transcribe one PDF at a time into `content/drafts/<slug>.json` (`dsa`, `cn`, `os`, `dbms`, or `oops`). Draft JSON files are ignored by Git; reviewed published copies are committed. Preserve each PDF's actual ordering, titles, and links. A minimal **shape example**, with placeholder titles to replace, is:
 
 ```json
 {
@@ -72,7 +72,8 @@ The DSA roadmap in `content/published/dsa.json` is based on the supplied outline
               "stable_key": "item-1",
               "title": "Replace with the PDF resource title",
               "kind": "resource",
-              "source_url": null
+              "source_url": null,
+              "content_url": null
             }
           ]
         }
@@ -82,7 +83,7 @@ The DSA roadmap in `content/published/dsa.json` is based on the supplied outline
 }
 ```
 
-Keys use lowercase letters, digits, and hyphens and must be unique among siblings. Steps, topics, and items use their array order on the site. `source_url` may be `null` or an HTTP(S) link. From `backend/` with its virtual environment active:
+Keys use lowercase letters, digits, and hyphens and must be unique among siblings. Steps, topics, and items use their array order on the site. Both `source_url` (the practice problem) and `content_url` (the learning resource) may be `null` or an HTTP(S) link. `content_url: null` displays as `-` for a question; do not store the literal dash as a URL. Existing manifests can omit `content_url`. From `backend/` with its virtual environment active:
 
 ```bash
 python -m app.content_cli validate ../content/drafts/dsa.json
@@ -100,7 +101,7 @@ python -m app.content_cli publish-db dsa 1
 
 The database import does not expose a draft through the public API. Publishing a new revision switches the public pointer atomically and retains older revisions. The Pages and API publication commands are separate because they run on different hosts.
 
-To show the published DSA roadmap through your **local MySQL API**, run `python -m app.content_cli import-draft ../content/published/dsa.json` from `backend/`, then run `python -m app.content_cli publish-db dsa <printed-revision-number>`. Refresh the frontend after publication.
+To show the linked DSA sheet through your **local MySQL API**, first run `alembic upgrade head` for the new content-link column. Then run `python -m app.content_cli import-draft ../content/published/dsa.json` from `backend/`, followed by `python -m app.content_cli publish-db dsa <printed-revision-number>`. Refresh the frontend after publication. To inspect the same sheet without MySQL, run `VITE_STATIC_SITE=1 npm run dev` in `frontend/` and open `http://localhost:5173/thewhitecoder/#/sheets/dsa`.
 
 If port 3306 is already in use, stop the other MySQL service or change both the Compose host port and `DATABASE_URL`. The passwords in Compose and `.env.example` are strictly for local development; provision separate credentials for production.
 
@@ -121,7 +122,7 @@ The database-backed test requires `docker compose up -d db` and `alembic upgrade
 
 ## Next milestones
 
-1. Review the DSA roadmap and attach curated problems and links from the DSA PDF; then map the remaining four PDFs.
+1. Review the DSA practice questions against the source PDF, then add learning resource links and map the remaining four PDFs.
 2. Add a browser-based admin editor and review workflow after the first PDF has established the content shape.
 3. Implement manual sign-up plus Google and Facebook login, using revocable server sessions.
 4. Add per-user progress and bookmarks, then complete accessibility and deployment checks.

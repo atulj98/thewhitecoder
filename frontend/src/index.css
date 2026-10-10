@@ -652,37 +652,71 @@ main {
   color: #748b96;
   font-weight: 600;
 }
-.topic ol {
+.topic-body {
   border-top: 1px solid #edf1f2;
-  margin: 0;
-  padding: 4px 20px 12px;
-  list-style: none;
+  padding: 16px 20px 20px;
 }
-.topic li {
-  display: flex;
-  align-items: baseline;
-  gap: 11px;
-  padding: 12px 0;
-  color: #425b69;
+.study-focus {
+  margin: 0 0 17px;
+  color: #536977;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.study-focus strong {
+  color: #087e6c;
+  margin-right: 8px;
+}
+.question-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
   font-size: 13px;
 }
-.topic li + li {
-  border-top: 1px solid #f0f3f3;
+.question-table th {
+  padding: 9px 10px;
+  background: #f5faf8;
+  color: #53726b;
+  font-size: 11px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-.item-kind {
-  flex: 0 0 65px;
-  color: #078b79;
-  font-size: 10px;
-  font-weight: 900;
-  text-transform: capitalize;
+.question-table th:first-child {
+  width: 51%;
 }
-.item-title {
-  flex: 1;
-  line-height: 1.55;
+.question-table th:nth-child(2) {
+  width: 18%;
 }
-.topic li a {
-  margin-left: auto;
+.question-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #edf1f2;
+  color: #294151;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+.question-table a,
+.topic-resources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
   color: #0c9d88;
+  font-weight: 700;
+}
+.question-table a:hover,
+.topic-resources a:hover {
+  text-decoration: underline;
+}
+.missing-link {
+  color: #71838d;
+}
+.topic-resources {
+  padding-left: 20px;
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+.topic-resources li + li {
+  margin-top: 8px;
 }
 .not-found {
   padding: 100px 0;
@@ -707,6 +741,22 @@ main {
   }
 }
 @media (max-width: 620px) {
+  .topic-body {
+    padding: 13px 12px 16px;
+  }
+  .question-table {
+    font-size: 12px;
+  }
+  .question-table th,
+  .question-table td {
+    padding: 9px 5px;
+  }
+  .question-table th:first-child {
+    width: 43%;
+  }
+  .question-table th:nth-child(2) {
+    width: 19%;
+  }
   .container {
     width: min(100% - 32px, 1160px);
   }

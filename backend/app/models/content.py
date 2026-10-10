@@ -73,4 +73,5 @@ class Item(Base):
     title: Mapped[str] = mapped_column(String(240), nullable=False)
     kind: Mapped[str] = mapped_column(String(24), nullable=False)
     source_url: Mapped[str | None] = mapped_column(String(2048), nullable=True)
+    content_url: Mapped[str | None] = mapped_column(String(2048), nullable=True)
     sort_order: Mapped[int] = mapped_column(Integer, nullable=False)

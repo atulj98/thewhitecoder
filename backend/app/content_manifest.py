@@ -22,12 +22,13 @@ class ItemManifest(ManifestModel):
     title: str = Field(min_length=1, max_length=240)
     kind: str = Field(default="resource", min_length=1, max_length=24, pattern=r"^[a-z_]+$")
     source_url: HttpUrl | None = None
+    content_url: HttpUrl | None = None
 
-    @field_validator("source_url")
+    @field_validator("source_url", "content_url")
     @classmethod
     def check_url_length(cls, value: HttpUrl | None) -> HttpUrl | None:
         if value is not None and len(str(value)) > 2048:
-            raise ValueError("source_url exceeds the database limit of 2048 characters")
+            raise ValueError("URL exceeds the database limit of 2048 characters")
         return value
 
 
