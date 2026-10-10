@@ -22,6 +22,20 @@
               "kind": "practice",
               "source_url": "https://codeforces.com/problemset/problem/4/A",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Way Too Long Words",
+              "kind": "practice",
+              "source_url": "https://codeforces.com/problemset/problem/71/A",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Next Round",
+              "kind": "practice",
+              "source_url": "https://codeforces.com/problemset/problem/158/A",
+              "content_url": null
             }
           ]
         },
@@ -41,6 +55,13 @@
               "kind": "practice",
               "source_url": "https://codeforces.com/problemset/problem/231/A",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Number of Steps to Reduce a Number to Zero",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/",
+              "content_url": null
             }
           ]
         },
@@ -53,6 +74,13 @@
               "title": "Arrays, strings, indexed access, references, and common library containers",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Shuffle the Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/shuffle-the-array/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -79,6 +107,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/running-sum-of-1d-array/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Wrong Subtraction",
+              "kind": "practice",
+              "source_url": "https://codeforces.com/problemset/problem/977/A",
+              "content_url": null
             }
           ]
         }
@@ -99,6 +134,13 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Solid Right Angle Triangle Pattern",
+              "kind": "practice",
+              "source_url": "https://www.geeksforgeeks.org/problems/right-angle-triangle-1605685807/1",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Solid Rectangle",
               "kind": "practice",
@@ -116,6 +158,13 @@
               "title": "Compute leading spaces and visible symbols for each row",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Half Diamond Star Pattern",
+              "kind": "practice",
+              "source_url": "https://www.geeksforgeeks.org/problems/triangle-pattern-1661718013/1",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -142,6 +191,13 @@
               "kind": "practice",
               "source_url": "https://www.geeksforgeeks.org/problems/floyds-triangle1222/1",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Concentric Square Pattern",
+              "kind": "practice",
+              "source_url": "https://www.geeksforgeeks.org/problems/square-pattern-1662666141/1",
+              "content_url": null
             }
           ]
         },
@@ -154,6 +210,13 @@
               "title": "Use mirrored positions and row-dependent limits",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Inverted Right Angle Triangle Pattern",
+              "kind": "practice",
+              "source_url": "https://www.geeksforgeeks.org/problems/inverted-right-angletriangle-1605691171--104349/1",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -181,6 +244,13 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Move Zeroes",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/move-zeroes/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Rotate Array",
               "kind": "practice",
@@ -198,6 +268,20 @@
               "title": "Prefix sums, suffix products, and range calculations",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Find Pivot Index",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-pivot-index/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Range Sum Query - Immutable",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/range-sum-query-immutable/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -219,10 +303,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Best Time to Buy and Sell Stock",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Maximum Subarray",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/maximum-subarray/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Maximum Product Subarray",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/maximum-product-subarray/",
               "content_url": null
             }
           ]
@@ -238,10 +336,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Set Matrix Zeroes",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/set-matrix-zeroes/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Merge Intervals",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/merge-intervals/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Insert Interval",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/insert-interval/",
               "content_url": null
             }
           ]
@@ -268,6 +380,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/reverse-string/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Reverse Words in a String III",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/reverse-words-in-a-string-iii/",
+              "content_url": null
             }
           ]
         },
@@ -282,10 +401,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Valid Anagram",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/valid-anagram/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Valid Palindrome",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/valid-palindrome/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Valid Palindrome II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/valid-palindrome-ii/",
               "content_url": null
             }
           ]
@@ -301,10 +434,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Length of Last Word",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/length-of-last-word/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Reverse Words in a String",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/reverse-words-in-a-string/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "String to Integer (atoi)",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/string-to-integer-atoi/",
               "content_url": null
             }
           ]
@@ -318,6 +465,13 @@
               "title": "Run-length encoding, repeated patterns, and character counts",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Merge Strings Alternately",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/merge-strings-alternately/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -350,6 +504,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/contains-duplicate/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "First Unique Character in a String",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+              "content_url": null
             }
           ]
         },
@@ -368,6 +529,13 @@
               "title": "Two Sum",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/two-sum/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "4Sum II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/4sum-ii/",
               "content_url": null
             }
           ]
@@ -388,6 +556,20 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/subarray-sum-equals-k/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Contiguous Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/contiguous-array/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Subarray Sums Divisible by K",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
+              "content_url": null
             }
           ]
         },
@@ -407,6 +589,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/group-anagrams/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Top K Frequent Elements",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/top-k-frequent-elements/",
+              "content_url": null
             }
           ]
         }
@@ -425,6 +614,13 @@
               "title": "Comparison rules, stability, and when sorting changes an approach",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Sort the People",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/sort-the-people/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -451,6 +647,13 @@
               "kind": "practice",
               "source_url": "https://www.geeksforgeeks.org/problems/bubble-sort/1",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Insertion Sort",
+              "kind": "practice",
+              "source_url": "https://www.geeksforgeeks.org/problems/insertion-sort/1",
+              "content_url": null
             }
           ]
         },
@@ -470,6 +673,13 @@
               "kind": "practice",
               "source_url": "https://www.geeksforgeeks.org/problems/merge-sort/1",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Quick Sort",
+              "kind": "practice",
+              "source_url": "https://www.geeksforgeeks.org/problems/quick-sort/1",
+              "content_url": null
             }
           ]
         },
@@ -482,6 +692,13 @@
               "title": "Sorted scans, inversion counting, and interval processing",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Merge Sorted Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/merge-sorted-array/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -514,6 +731,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/binary-search/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Guess Number Higher or Lower",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/guess-number-higher-or-lower/",
+              "content_url": null
             }
           ]
         },
@@ -526,6 +750,13 @@
               "title": "Boundary searches over duplicate values",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Search Insert Position",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/search-insert-position/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -552,6 +783,20 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/koko-eating-bananas/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Capacity To Ship Packages Within D Days",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Split Array Largest Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/split-array-largest-sum/",
+              "content_url": null
             }
           ]
         },
@@ -564,6 +809,13 @@
               "title": "Rotated arrays, peaks, and row-sorted matrices",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Find Minimum in Rotated Sorted Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -591,10 +843,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Squares of a Sorted Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/squares-of-a-sorted-array/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Two Sum II - Input Array Is Sorted",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Container With Most Water",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/container-with-most-water/",
               "content_url": null
             }
           ]
@@ -610,10 +876,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Remove Element",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/remove-element/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Remove Duplicates from Sorted Array",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Remove Duplicates from Sorted Array II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/",
               "content_url": null
             }
           ]
@@ -634,6 +914,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/maximum-average-subarray-i/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/",
+              "content_url": null
             }
           ]
         },
@@ -653,6 +940,20 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Longest Substring Without Repeating Characters",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Longest Repeating Character Replacement",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+              "content_url": null
             }
           ]
         },
@@ -667,10 +968,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Count Number of Nice Subarrays",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Subarrays with K Different Integers",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/subarrays-with-k-different-integers/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Binary Subarrays With Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/binary-subarrays-with-sum/",
               "content_url": null
             }
           ]
@@ -697,6 +1012,20 @@
               "kind": "practice",
               "source_url": "https://www.geeksforgeeks.org/problems/print-1-to-n-without-using-loops3621/1",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Fibonacci Number",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/fibonacci-number/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Pow(x, n)",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/powx-n/",
+              "content_url": null
             }
           ]
         },
@@ -715,6 +1044,13 @@
               "title": "Subsets",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/subsets/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Combinations",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/combinations/",
               "content_url": null
             }
           ]
@@ -735,6 +1071,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/permutations/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Permutations II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/permutations-ii/",
+              "content_url": null
             }
           ]
         },
@@ -749,10 +1092,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Word Search",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/word-search/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "N-Queens",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/n-queens/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Sudoku Solver",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/sudoku-solver/",
               "content_url": null
             }
           ]
@@ -772,6 +1129,13 @@
               "title": "Singly and doubly linked nodes, insertion, and deletion",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Convert Binary Number in a Linked List to Integer",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -798,6 +1162,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/reverse-linked-list/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Reverse Linked List II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/reverse-linked-list-ii/",
+              "content_url": null
             }
           ]
         },
@@ -817,6 +1188,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/linked-list-cycle/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Linked List Cycle II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/linked-list-cycle-ii/",
+              "content_url": null
             }
           ]
         },
@@ -835,6 +1213,13 @@
               "title": "Merge Two Sorted Lists",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Add Two Numbers",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/add-two-numbers/",
               "content_url": null
             }
           ]
@@ -861,6 +1246,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/implement-queue-using-stacks/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Implement Stack using Queues",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/implement-stack-using-queues/",
+              "content_url": null
             }
           ]
         },
@@ -880,6 +1272,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/valid-parentheses/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Minimum Remove to Make Valid Parentheses",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
+              "content_url": null
             }
           ]
         },
@@ -894,10 +1293,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Next Greater Element I",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/next-greater-element-i/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Daily Temperatures",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/daily-temperatures/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Largest Rectangle in Histogram",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
               "content_url": null
             }
           ]
@@ -918,6 +1331,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/sliding-window-maximum/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
+              "content_url": null
             }
           ]
         }
@@ -936,6 +1356,13 @@
               "title": "AND, OR, XOR, shifts, signedness, and binary representation",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Power of Two",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/power-of-two/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -962,6 +1389,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/sum-of-all-subset-xor-totals/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Maximum Product of Word Lengths",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+              "content_url": null
             }
           ]
         },
@@ -976,10 +1410,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Missing Number",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/missing-number/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Single Number",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/single-number/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Single Number III",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/single-number-iii/",
               "content_url": null
             }
           ]
@@ -993,6 +1441,13 @@
               "title": "Power-of-two checks, low-bit extraction, and population count",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Hamming Distance",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/hamming-distance/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1025,6 +1480,20 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/jump-game/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Best Time to Buy and Sell Stock II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Jump Game II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/jump-game-ii/",
+              "content_url": null
             }
           ]
         },
@@ -1043,6 +1512,13 @@
               "title": "Non-overlapping Intervals",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/non-overlapping-intervals/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Minimum Number of Arrows to Burst Balloons",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
               "content_url": null
             }
           ]
@@ -1063,6 +1539,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/assign-cookies/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Boats to Save People",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/boats-to-save-people/",
+              "content_url": null
             }
           ]
         },
@@ -1081,6 +1564,13 @@
               "title": "Lemonade Change",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/lemonade-change/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Candy",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/candy/",
               "content_url": null
             }
           ]
@@ -1107,6 +1597,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Binary Tree Level Order Traversal",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+              "content_url": null
             }
           ]
         },
@@ -1126,6 +1623,20 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Balanced Binary Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/balanced-binary-tree/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Diameter of Binary Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+              "content_url": null
             }
           ]
         },
@@ -1138,6 +1649,13 @@
               "title": "Lowest common ancestor and root-to-node path reasoning",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Path Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/path-sum/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1157,6 +1675,13 @@
               "title": "Rebuild trees from traversal sequences and perform breadth-first views",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Binary Tree Right Side View",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1189,6 +1714,20 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/search-in-a-binary-search-tree/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Insert into a Binary Search Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Validate Binary Search Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/validate-binary-search-tree/",
+              "content_url": null
             }
           ]
         },
@@ -1208,6 +1747,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/delete-node-in-a-bst/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Trim a Binary Search Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/trim-a-binary-search-tree/",
+              "content_url": null
             }
           ]
         },
@@ -1220,6 +1766,13 @@
               "title": "Use inorder order for ranks and range searches",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Two Sum IV - Input is a BST",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1246,6 +1799,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/binary-search-tree-iterator/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Recover Binary Search Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/recover-binary-search-tree/",
+              "content_url": null
             }
           ]
         }
@@ -1264,6 +1824,13 @@
               "title": "Min-heaps, max-heaps, push/pop, and heapify",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Last Stone Weight",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/last-stone-weight/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1290,6 +1857,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "K Closest Points to Origin",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/k-closest-points-to-origin/",
+              "content_url": null
             }
           ]
         },
@@ -1309,6 +1883,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/merge-k-sorted-lists/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Find K Pairs with Smallest Sums",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
+              "content_url": null
             }
           ]
         },
@@ -1327,6 +1908,13 @@
               "title": "Find Median from Data Stream",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/find-median-from-data-stream/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Sliding Window Median",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/sliding-window-median/",
               "content_url": null
             }
           ]
@@ -1348,10 +1936,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Flood Fill",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/flood-fill/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Number of Islands",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/number-of-islands/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Clone Graph",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/clone-graph/",
               "content_url": null
             }
           ]
@@ -1372,6 +1974,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/course-schedule/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Course Schedule II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/course-schedule-ii/",
+              "content_url": null
             }
           ]
         },
@@ -1386,10 +1995,24 @@
               "source_url": null
             },
             {
+              "stable_key": "practice-2",
+              "title": "Shortest Path in Binary Matrix",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice",
               "title": "Network Delay Time",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/network-delay-time/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Cheapest Flights Within K Stops",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
               "content_url": null
             }
           ]
@@ -1403,6 +2026,13 @@
               "title": "Path compression, union by size, Kruskal, and Prim",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Redundant Connection",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/redundant-connection/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1429,6 +2059,217 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/critical-connections-in-a-network/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/",
+              "content_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stable_key": "dynamic-programming",
+      "title": "Dynamic Programming",
+      "topics": [
+        {
+          "stable_key": "recursion-to-memoization",
+          "title": "From recursion to memoization",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Define a state and recurrence, identify overlapping work, and cache computed answers",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Climbing Stairs",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/climbing-stairs/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Min Cost Climbing Stairs",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "House Robber",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/house-robber/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "one-dimensional-tabulation",
+          "title": "One-dimensional tabulation",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Set base cases, iterate states in dependency order, and consider space reduction",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Decode Ways",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/decode-ways/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Coin Change",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/coin-change/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Longest Increasing Subsequence",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "grid-states-and-paths",
+          "title": "Grid states and path counts",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Let each cell represent a subproblem and reason about its incoming transitions",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Unique Paths",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/unique-paths/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Minimum Path Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/minimum-path-sum/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Triangle",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/triangle/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "knapsack-and-subset-decisions",
+          "title": "Knapsack and subset decisions",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Choose take or skip states and distinguish counting from feasibility",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Partition Equal Subset Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Coin Change II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/coin-change-ii/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Target Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/target-sum/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "string-and-subsequence-dp",
+          "title": "String and subsequence DP",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Use one or two prefix lengths as state and derive transitions for matches",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Longest Common Subsequence",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-common-subsequence/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Longest Palindromic Subsequence",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Edit Distance",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/edit-distance/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "state-design-and-interval-dp",
+          "title": "State design and interval DP",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Add decision state when needed, then solve ranges by increasing length",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Best Time to Buy and Sell Stock with Cooldown",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Minimum Cost to Cut a Stick",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-3",
+              "title": "Burst Balloons",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/burst-balloons/",
+              "content_url": null
             }
           ]
         }
@@ -1447,6 +2288,13 @@
               "title": "Failure links and Knuth-Morris-Pratt pattern matching",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Repeated Substring Pattern",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/repeated-substring-pattern/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1473,6 +2321,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/sum-of-scores-of-built-strings/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Minimum Time to Revert Word to Initial State II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-ii/",
+              "content_url": null
             }
           ]
         },
@@ -1485,6 +2340,13 @@
               "title": "Prefix hashes, substring comparisons, and collision awareness",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Repeated DNA Sequences",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/repeated-dna-sequences/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1504,6 +2366,13 @@
               "title": "Expand around centers and understand Manacher's linear-time radius method",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Longest Palindromic Substring",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-palindromic-substring/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1536,6 +2405,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Longest Word in Dictionary",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/longest-word-in-dictionary/",
+              "content_url": null
             }
           ]
         },
@@ -1554,6 +2430,13 @@
               "title": "Map Sum Pairs",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/map-sum-pairs/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Sum of Prefix Scores of Strings",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/sum-of-prefix-scores-of-strings/",
               "content_url": null
             }
           ]
@@ -1574,6 +2457,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Maximum XOR With an Element From Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
+              "content_url": null
             }
           ]
         },
@@ -1586,6 +2476,13 @@
               "title": "Use trie edges to avoid exploring impossible strings",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Search Suggestions System",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/search-suggestions-system/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1618,6 +2515,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/range-sum-query-mutable/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Count of Range Sum",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-of-range-sum/",
+              "content_url": null
             }
           ]
         },
@@ -1636,6 +2540,13 @@
               "title": "Longest Increasing Subsequence II",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/longest-increasing-subsequence-ii/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Find Building Where Alice and Bob Can Meet",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet/",
               "content_url": null
             }
           ]
@@ -1656,6 +2567,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/handling-sum-queries-after-update/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Range Module",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/range-module/",
+              "content_url": null
             }
           ]
         },
@@ -1675,6 +2593,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/falling-squares/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "My Calendar III",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/my-calendar-iii/",
+              "content_url": null
             }
           ]
         }
@@ -1693,6 +2618,13 @@
               "title": "Use the least significant set bit to move through partial sums",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Count of Smaller Numbers After Self (Fenwick approach)",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1719,6 +2651,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/range-sum-query-mutable/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Create Sorted Array through Instructions (Fenwick approach)",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/create-sorted-array-through-instructions/",
+              "content_url": null
             }
           ]
         },
@@ -1737,6 +2676,13 @@
               "title": "Difference Array",
               "kind": "practice",
               "source_url": "https://www.geeksforgeeks.org/problems/difference-array/1",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Shifting Letters II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/shifting-letters-ii/",
               "content_url": null
             }
           ]
@@ -1757,6 +2703,13 @@
               "kind": "practice",
               "source_url": "https://codeforces.com/problemset/problem/61/E",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Reverse Pairs (Fenwick approach)",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/reverse-pairs/",
+              "content_url": null
             }
           ]
         }
@@ -1775,6 +2728,13 @@
               "title": "Convert interval endpoints into ordered start and end events",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Corporate Flight Bookings",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/corporate-flight-bookings/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1801,6 +2761,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/maximum-population-year/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Describe the Painting",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/describe-the-painting/",
+              "content_url": null
             }
           ]
         },
@@ -1813,6 +2780,13 @@
               "title": "Maintain currently intersecting objects in a set or heap",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Meeting Rooms III",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/meeting-rooms-iii/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1832,6 +2806,13 @@
               "title": "Map large coordinates to compact ordered indices",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Number of Flowers in Full Bloom",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/number-of-flowers-in-full-bloom/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1864,6 +2845,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Count Sorted Vowel Strings",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-sorted-vowel-strings/",
+              "content_url": null
             }
           ]
         },
@@ -1883,6 +2871,13 @@
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/pascals-triangle/",
               "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Pascal's Triangle II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/pascals-triangle-ii/",
+              "content_url": null
             }
           ]
         },
@@ -1895,6 +2890,13 @@
               "title": "Correct double-counting across overlapping sets",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Nth Magical Number",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/nth-magical-number/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1914,6 +2916,13 @@
               "title": "Stars and bars and upper-bound constraints",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Distribute Candies Among Children I",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/distribute-candies-among-children-i/",
+              "content_url": null
             },
             {
               "stable_key": "practice",
@@ -1939,6 +2948,13 @@
               "title": "Unique Binary Search Trees",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/unique-binary-search-trees/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "All Possible Full Binary Trees",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/all-possible-full-binary-trees/",
               "content_url": null
             }
           ]

@@ -666,6 +666,19 @@ main {
   color: #087e6c;
   margin-right: 8px;
 }
+.practice-note {
+  margin: 0 0 12px;
+  color: #627482;
+  font-size: 12px;
+}
+.question-number {
+  display: inline-block;
+  min-width: 24px;
+  margin-right: 5px;
+  color: #0c9d88;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
 .question-table {
   width: 100%;
   border-collapse: collapse;

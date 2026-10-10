@@ -1,6 +1,6 @@
 # The White Coder - Study Sheets
 
-A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet has 23 ordered steps, 95 subtopics, and 95 curated practice questions with direct LeetCode, GeeksforGeeks, or Codeforces links. Each question's separate content link is currently shown as `-` until learning resources are added. The other four subjects remain in preparation.
+A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet has 24 ordered steps, 101 subtopics, and 229 curated practice questions with direct LeetCode, GeeksforGeeks, or Codeforces links. Each topic has a study focus and two or more questions in a suggested order; Dynamic Programming adds six topics with three questions each. Each question's separate content link is currently shown as `-` until learning resources are added. The other four subjects remain in preparation.
 
 ## Stack
 
@@ -53,7 +53,7 @@ To preview the published Pages content locally without MySQL, run `VITE_STATIC_S
 
 ## Prepare and publish sheet content
 
-The DSA roadmap in `content/published/dsa.json` follows the supplied topic outline. Practice questions have been independently curated; they have not yet been matched to a source PDF. For later sheets, transcribe one PDF at a time into `content/drafts/<slug>.json` (`dsa`, `cn`, `os`, `dbms`, or `oops`). Draft JSON files are ignored by Git; reviewed published copies are committed. Preserve each PDF's actual ordering, titles, and links. A minimal **shape example**, with placeholder titles to replace, is:
+The DSA roadmap in `content/published/dsa.json` follows the supplied topic outline, with Dynamic Programming added after Graph as an essential bridge to advanced problem solving. The selection and ordering of problems were independently curated after reviewing a public DSA roadmap for progression; neither its layout nor its problem list was copied. Start with the study focus for each topic, then solve its questions in order. Practice questions have not yet been matched to a source PDF. For later sheets, transcribe one PDF at a time into `content/drafts/<slug>.json` (`dsa`, `cn`, `os`, `dbms`, or `oops`). Draft JSON files are ignored by Git; reviewed published copies are committed. Preserve each PDF's actual ordering, titles, and links. A minimal **shape example**, with placeholder titles to replace, is:
 
 ```json
 {
@@ -122,7 +122,7 @@ The database-backed test requires `docker compose up -d db` and `alembic upgrade
 
 ## Next milestones
 
-1. Review the DSA practice questions against the source PDF, then add learning resource links and map the remaining four PDFs.
+1. Review the expanded DSA questions with students, add original learning resources and explanations, then map the remaining four PDFs.
 2. Add a browser-based admin editor and review workflow after the first PDF has established the content shape.
 3. Implement manual sign-up plus Google and Facebook login, using revocable server sessions.
 4. Add per-user progress and bookmarks, then complete accessibility and deployment checks.

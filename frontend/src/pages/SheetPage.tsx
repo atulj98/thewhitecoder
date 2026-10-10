@@ -86,7 +86,20 @@ export default function SheetPage() {
                     (count, step) => count + step.topics.length,
                     0,
                   )}{" "}
-                  topics
+                  topics ·{" "}
+                  {sheet.steps.reduce(
+                    (count, step) =>
+                      count +
+                      step.topics.reduce(
+                        (topicCount, topic) =>
+                          topicCount +
+                          topic.items.filter((item) => item.kind === "practice")
+                            .length,
+                        0,
+                      ),
+                    0,
+                  )}{" "}
+                  questions
                 </p>
               )}
             </div>
@@ -168,6 +181,12 @@ export default function SheetPage() {
                                 </p>
                               ))}
                               {questions.length > 0 && (
+                                <p className="practice-note">
+                                  Solve these in order. Revisit the study focus
+                                  if you get stuck.
+                                </p>
+                              )}
+                              {questions.length > 0 && (
                                 <table className="question-table">
                                   <thead>
                                     <tr>
@@ -177,9 +196,14 @@ export default function SheetPage() {
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    {questions.map((item) => (
+                                    {questions.map((item, index) => (
                                       <tr key={item.stable_key}>
-                                        <td>{item.title}</td>
+                                        <td>
+                                          <span className="question-number">
+                                            {String(index + 1).padStart(2, "0")}
+                                          </span>{" "}
+                                          {item.title}
+                                        </td>
                                         <td>
                                           {item.content_url ? (
                                             <a
