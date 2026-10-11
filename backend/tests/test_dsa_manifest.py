@@ -32,8 +32,7 @@ def test_dsa_practice_path_is_complete_and_directly_linked():
     assert dp.stable_key == "dynamic-programming"
     assert len(dp.topics) == 7
     assert all(
-        sum(item.kind == "practice" for item in topic.items) == 3
-        for topic in dp.topics[:-1]
+        sum(item.kind == "practice" for item in topic.items) == 3 for topic in dp.topics[:-1]
     )
     assert dp.topics[-1].stable_key == "digit-dp"
     assert sum(item.kind == "practice" for item in dp.topics[-1].items) == 4
