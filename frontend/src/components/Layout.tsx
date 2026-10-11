@@ -39,9 +39,8 @@ export default function Layout() {
               />
             </span>
             <span className="brand-wordmark">
-              <span className="brand-prefix">THE</span>
               <span className="brand-name">
-                White <strong>Coder</strong>
+                The White <strong>Coder</strong>
                 <span className="period">.</span>
               </span>
             </span>
@@ -54,7 +53,8 @@ export default function Layout() {
                   type="button"
                   onClick={scrollToSheets}
                 >
-                  Explore sheets
+                  <span className="nav-full-label">Explore sheets</span>
+                  <span className="nav-short-label">Sheets</span>
                 </button>
               ) : (
                 <Link
@@ -62,7 +62,8 @@ export default function Layout() {
                   to="/"
                   state={{ scrollToSheets: true }}
                 >
-                  Explore sheets
+                  <span className="nav-full-label">Explore sheets</span>
+                  <span className="nav-short-label">Sheets</span>
                 </Link>
               )}
             </nav>

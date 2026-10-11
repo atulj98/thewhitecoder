@@ -71,15 +71,15 @@ export default function CatalogPage() {
                 <span className="preview-mark">
                   <Braces size={18} />
                 </span>
-                <span>THE WHITE CODER / DSA</span>
-                <span className="preview-live">STUDY PATH</span>
+                <span>roadmap / dsa / study-path</span>
+                <span className="preview-live">OPEN SHEET</span>
               </div>
               <div className="preview-intro">
-                <span>THE ROADMAP</span>
+                <span>YOUR NEXT STEPS</span>
                 <strong>
-                  Build the way
+                  From basics
                   <br />
-                  you think.
+                  to mastery.
                 </strong>
               </div>
               <div className="preview-steps">
@@ -109,9 +109,10 @@ export default function CatalogPage() {
                 <ArrowUpRight size={15} />
               </div>
             </div>
-            <span className="preview-side-note">
-              PRACTICE WITH PURPOSE / 001
-            </span>
+            <div className="preview-side-note">
+              <span>DSA sheet · Structured practice from day one</span>
+              <span>OPEN ROADMAP ↗</span>
+            </div>
           </div>
         </div>
       </section>

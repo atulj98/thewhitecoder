@@ -8,11 +8,12 @@ def test_dsa_practice_path_is_complete_and_directly_linked():
     manifest = load_manifest(path)
     assert len(manifest.steps) == 24
     topics = [topic for step in manifest.steps for topic in step.topics]
-    assert len(topics) == 101
-    assert sum(item.kind == "practice" for topic in topics for item in topic.items) == 229
-    assert [step.stable_key for step in manifest.steps][17:19] == [
-        "dynamic-programming",
-        "string-hard",
+    assert len(topics) == 102
+    assert sum(item.kind == "practice" for topic in topics for item in topic.items) == 241
+    assert [step.stable_key for step in manifest.steps][14:17] == [
+        "binary-search-tree",
+        "combinatorics",
+        "heaps",
     ]
     for topic in topics:
         questions = [item for item in topic.items if item.kind == "practice"]
@@ -27,9 +28,15 @@ def test_dsa_practice_path_is_complete_and_directly_linked():
                 "codeforces.com",
             }, question.title
 
-    dp = manifest.steps[17]
-    assert len(dp.topics) == 6
-    assert all(sum(item.kind == "practice" for item in topic.items) == 3 for topic in dp.topics)
+    dp = manifest.steps[18]
+    assert dp.stable_key == "dynamic-programming"
+    assert len(dp.topics) == 7
+    assert all(
+        sum(item.kind == "practice" for item in topic.items) == 3
+        for topic in dp.topics[:-1]
+    )
+    assert dp.topics[-1].stable_key == "digit-dp"
+    assert sum(item.kind == "practice" for item in dp.topics[-1].items) == 4
 
 
 def test_questions_have_unique_links_except_the_intentional_two_tree_approaches():

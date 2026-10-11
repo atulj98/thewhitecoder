@@ -1,6 +1,6 @@
 # The White Coder - Study Sheets
 
-A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet has 24 ordered steps, 101 subtopics, and 229 curated practice questions with direct LeetCode, GeeksforGeeks, or Codeforces links. Each topic has a study focus and two or more questions in a suggested order; Dynamic Programming adds six topics with three questions each. Each question's separate content link is currently shown as `-` until learning resources are added. The other four subjects remain in preparation.
+A public, step-by-step learning hub for **DSA, Computer Networks, Operating Systems, DBMS, and OOP** under The White Coder brand. The DSA sheet has 24 ordered steps, 102 subtopics, and 241 curated practice questions with direct LeetCode, GeeksforGeeks, or Codeforces links. Each topic has a study focus and two or more questions in a suggested order. Combinatorics follows Binary Search Tree; Dynamic Programming has seven topics, ending with Digit DP. Each question's separate content link is currently shown as `-` until learning resources are added. The other four subjects remain in preparation.
 
 ## Stack
 

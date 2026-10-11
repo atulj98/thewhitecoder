@@ -1,41 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 type Theme = "light" | "dark";
 const storageKey = "the-white-coder-theme";
 
-function savedTheme(): Theme | null {
-  try {
-    const value = localStorage.getItem(storageKey);
-    return value === "light" || value === "dark" ? value : null;
-  } catch {
-    return null;
-  }
-}
-
 function applyTheme(theme: Theme) {
   document.documentElement.dataset.theme = theme;
   document
     .querySelector('meta[name="theme-color"]')
-    ?.setAttribute("content", theme === "dark" ? "#111c1e" : "#f8f7f2");
+    ?.setAttribute("content", theme === "dark" ? "#0c1322" : "#f3f6fc");
 }
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() =>
-    document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+    document.documentElement.dataset.theme === "light" ? "light" : "dark",
   );
-
-  useEffect(() => {
-    const preference = window.matchMedia("(prefers-color-scheme: dark)");
-    const updateFromSystem = () => {
-      if (savedTheme()) return;
-      const next = preference.matches ? "dark" : "light";
-      applyTheme(next);
-      setTheme(next);
-    };
-    preference.addEventListener("change", updateFromSystem);
-    return () => preference.removeEventListener("change", updateFromSystem);
-  }, []);
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";

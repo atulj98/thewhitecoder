@@ -244,6 +244,20 @@
               "source_url": null
             },
             {
+              "stable_key": "count-even-digit-numbers",
+              "title": "Find Numbers with Even Number of Digits",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/",
+              "content_url": null
+            },
+            {
+              "stable_key": "check-sorted-rotation",
+              "title": "Check if Array Is Sorted and Rotated",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice-2",
               "title": "Move Zeroes",
               "kind": "practice",
@@ -270,6 +284,13 @@
               "source_url": null
             },
             {
+              "stable_key": "highest-altitude",
+              "title": "Find the Highest Altitude",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/find-the-highest-altitude/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice-2",
               "title": "Find Pivot Index",
               "kind": "practice",
@@ -288,6 +309,13 @@
               "title": "Product of Array Except Self",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/product-of-array-except-self/",
+              "content_url": null
+            },
+            {
+              "stable_key": "sorted-absolute-differences",
+              "title": "Sum of Absolute Differences in a Sorted Array",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/",
               "content_url": null
             }
           ]
@@ -317,6 +345,20 @@
               "content_url": null
             },
             {
+              "stable_key": "maximum-absolute-subarray-sum",
+              "title": "Maximum Absolute Sum of Any Subarray",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/",
+              "content_url": null
+            },
+            {
+              "stable_key": "maximum-circular-subarray-sum",
+              "title": "Maximum Sum Circular Subarray",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+              "content_url": null
+            },
+            {
               "stable_key": "practice-3",
               "title": "Maximum Product Subarray",
               "kind": "practice",
@@ -331,9 +373,23 @@
           "items": [
             {
               "stable_key": "learn",
-              "title": "Merging intervals and row-column traversal",
+              "title": "Merging intervals, boundary traversal, and in-place matrix transforms",
               "kind": "concept",
               "source_url": null
+            },
+            {
+              "stable_key": "spiral-matrix-traversal",
+              "title": "Spiral Matrix",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/spiral-matrix/",
+              "content_url": null
+            },
+            {
+              "stable_key": "rotate-matrix",
+              "title": "Rotate Image",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/rotate-image/",
+              "content_url": null
             },
             {
               "stable_key": "practice-2",
@@ -1812,6 +1868,142 @@
       ]
     },
     {
+      "stable_key": "combinatorics",
+      "title": "Combinatorics",
+      "topics": [
+        {
+          "stable_key": "counting-principles",
+          "title": "Counting principles",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Product and sum rules, permutations, and combinations",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Letter Combinations of a Phone Number",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Count Sorted Vowel Strings",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-sorted-vowel-strings/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "binomial-coefficients",
+          "title": "Binomial coefficients",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Pascal's triangle, factorial tables, and modular inverses",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Pascal's Triangle",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/pascals-triangle/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Pascal's Triangle II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/pascals-triangle-ii/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "inclusion-exclusion",
+          "title": "Inclusion-exclusion",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Correct double-counting across overlapping sets",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Nth Magical Number",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/nth-magical-number/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Ugly Number III",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/ugly-number-iii/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "distributing-objects",
+          "title": "Distributing objects",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Stars and bars and upper-bound constraints",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "Distribute Candies Among Children I",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/distribute-candies-among-children-i/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Distribute Candies Among Children II",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/distribute-candies-among-children-ii/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "recurrence-and-proof",
+          "title": "Recurrence and proof",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Derive a recurrence and check it on small cases",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "practice",
+              "title": "Unique Binary Search Trees",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/unique-binary-search-trees/",
+              "content_url": null
+            },
+            {
+              "stable_key": "practice-2",
+              "title": "All Possible Full Binary Trees",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/all-possible-full-binary-trees/",
+              "content_url": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "stable_key": "heaps",
       "title": "Heaps",
       "topics": [
@@ -2269,6 +2461,46 @@
               "title": "Burst Balloons",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/burst-balloons/",
+              "content_url": null
+            }
+          ]
+        },
+        {
+          "stable_key": "digit-dp",
+          "title": "Digit DP (bounded number counting)",
+          "items": [
+            {
+              "stable_key": "learn",
+              "title": "Count digit by digit using position, tight bound, leading zeros, and a task-specific state such as used digits or digit sum. Count [L, R] as F(R) - F(L - 1); memoize reusable states.",
+              "kind": "concept",
+              "source_url": null
+            },
+            {
+              "stable_key": "unique-digits-warmup",
+              "title": "Count Numbers with Unique Digits",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-numbers-with-unique-digits/",
+              "content_url": null
+            },
+            {
+              "stable_key": "bounded-digit-set",
+              "title": "Numbers At Most N Given Digit Set",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/numbers-at-most-n-given-digit-set/",
+              "content_url": null
+            },
+            {
+              "stable_key": "distinct-digits-under-bound",
+              "title": "Count Special Integers",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-special-integers/",
+              "content_url": null
+            },
+            {
+              "stable_key": "digit-sum-range",
+              "title": "Count of Integers",
+              "kind": "practice",
+              "source_url": "https://leetcode.com/problems/count-of-integers/",
               "content_url": null
             }
           ]
@@ -2819,142 +3051,6 @@
               "title": "Rectangle Area II",
               "kind": "practice",
               "source_url": "https://leetcode.com/problems/rectangle-area-ii/",
-              "content_url": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "stable_key": "combinatorics",
-      "title": "Combinatorics",
-      "topics": [
-        {
-          "stable_key": "counting-principles",
-          "title": "Counting principles",
-          "items": [
-            {
-              "stable_key": "learn",
-              "title": "Product and sum rules, permutations, and combinations",
-              "kind": "concept",
-              "source_url": null
-            },
-            {
-              "stable_key": "practice",
-              "title": "Letter Combinations of a Phone Number",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
-              "content_url": null
-            },
-            {
-              "stable_key": "practice-2",
-              "title": "Count Sorted Vowel Strings",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/count-sorted-vowel-strings/",
-              "content_url": null
-            }
-          ]
-        },
-        {
-          "stable_key": "binomial-coefficients",
-          "title": "Binomial coefficients",
-          "items": [
-            {
-              "stable_key": "learn",
-              "title": "Pascal's triangle, factorial tables, and modular inverses",
-              "kind": "concept",
-              "source_url": null
-            },
-            {
-              "stable_key": "practice",
-              "title": "Pascal's Triangle",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/pascals-triangle/",
-              "content_url": null
-            },
-            {
-              "stable_key": "practice-2",
-              "title": "Pascal's Triangle II",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/pascals-triangle-ii/",
-              "content_url": null
-            }
-          ]
-        },
-        {
-          "stable_key": "inclusion-exclusion",
-          "title": "Inclusion-exclusion",
-          "items": [
-            {
-              "stable_key": "learn",
-              "title": "Correct double-counting across overlapping sets",
-              "kind": "concept",
-              "source_url": null
-            },
-            {
-              "stable_key": "practice-2",
-              "title": "Nth Magical Number",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/nth-magical-number/",
-              "content_url": null
-            },
-            {
-              "stable_key": "practice",
-              "title": "Ugly Number III",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/ugly-number-iii/",
-              "content_url": null
-            }
-          ]
-        },
-        {
-          "stable_key": "distributing-objects",
-          "title": "Distributing objects",
-          "items": [
-            {
-              "stable_key": "learn",
-              "title": "Stars and bars and upper-bound constraints",
-              "kind": "concept",
-              "source_url": null
-            },
-            {
-              "stable_key": "practice-2",
-              "title": "Distribute Candies Among Children I",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/distribute-candies-among-children-i/",
-              "content_url": null
-            },
-            {
-              "stable_key": "practice",
-              "title": "Distribute Candies Among Children II",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/distribute-candies-among-children-ii/",
-              "content_url": null
-            }
-          ]
-        },
-        {
-          "stable_key": "recurrence-and-proof",
-          "title": "Recurrence and proof",
-          "items": [
-            {
-              "stable_key": "learn",
-              "title": "Derive a recurrence and check it on small cases",
-              "kind": "concept",
-              "source_url": null
-            },
-            {
-              "stable_key": "practice",
-              "title": "Unique Binary Search Trees",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/unique-binary-search-trees/",
-              "content_url": null
-            },
-            {
-              "stable_key": "practice-2",
-              "title": "All Possible Full Binary Trees",
-              "kind": "practice",
-              "source_url": "https://leetcode.com/problems/all-possible-full-binary-trees/",
               "content_url": null
             }
           ]
