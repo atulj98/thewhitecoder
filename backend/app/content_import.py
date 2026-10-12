@@ -29,6 +29,10 @@ def import_draft(db: Session, manifest: SheetManifest) -> int:
             state="draft",
         )
         db.add(revision)
+        db.flush()
+        steps: list[Step] = []
+        topics: list[Topic] = []
+        items: list[Item] = []
 
         for step_order, step_data in enumerate(manifest.steps, 1):
             step = Step(
@@ -38,7 +42,7 @@ def import_draft(db: Session, manifest: SheetManifest) -> int:
                 title=step_data.title,
                 sort_order=step_order,
             )
-            db.add(step)
+            steps.append(step)
             for topic_order, topic_data in enumerate(step_data.topics, 1):
                 topic = Topic(
                     id=str(uuid.uuid4()),
@@ -47,9 +51,9 @@ def import_draft(db: Session, manifest: SheetManifest) -> int:
                     title=topic_data.title,
                     sort_order=topic_order,
                 )
-                db.add(topic)
+                topics.append(topic)
                 for item_order, item_data in enumerate(topic_data.items, 1):
-                    db.add(
+                    items.append(
                         Item(
                             id=str(uuid.uuid4()),
                             topic_id=topic.id,
@@ -65,6 +69,13 @@ def import_draft(db: Session, manifest: SheetManifest) -> int:
                             sort_order=item_order,
                         )
                     )
+        # These models use foreign-key IDs without ORM relationships. Flush each
+        # parent layer before inserting its children, within the same transaction.
+        db.add_all(steps)
+        db.flush()
+        db.add_all(topics)
+        db.flush()
+        db.add_all(items)
     return revision_number
 
 

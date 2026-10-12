@@ -79,9 +79,12 @@ const previewSheets: SheetSummary[] = [
 ];
 
 async function getJson<T>(path: string): Promise<T> {
-  const response = await fetch(`/api/v1${path}`, {
-    headers: { Accept: "application/json" },
-  });
+  const response = await fetch(
+    `${(import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "")}/api/v1${path}`,
+    {
+      headers: { Accept: "application/json" },
+    },
+  );
   if (!response.ok) {
     if (response.status === 404) throw new Error("Sheet not found");
     throw new Error("We could not load the sheets. Please try again.");
