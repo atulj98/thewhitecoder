@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import AccountControls from "./AccountControls";
 import { scrollToSheets } from "../lib/scroll";
 
 function ScrollToTop() {
@@ -68,6 +69,7 @@ export default function Layout() {
               )}
             </nav>
             <ThemeToggle />
+            <AccountControls />
           </div>
         </div>
       </header>

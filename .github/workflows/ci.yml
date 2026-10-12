@@ -25,20 +25,20 @@ jobs:
   backend:
     runs-on: ubuntu-latest
     services:
-      mysql:
-        image: mysql:8.4
+      postgres:
+        image: postgres:17
         env:
-          MYSQL_DATABASE: study_sheets
-          MYSQL_USER: study_sheets
-          MYSQL_PASSWORD: study_sheets_dev
-          MYSQL_ROOT_PASSWORD: root_dev_only
+          POSTGRES_DB: study_sheets
+          POSTGRES_USER: study_sheets
+          POSTGRES_PASSWORD: study_sheets_dev
         ports:
-          - 3306:3306
+          - 5432:5432
         options: >-
-          --health-cmd="mysqladmin ping -h localhost -uroot -proot_dev_only"
+          --health-cmd="pg_isready -U study_sheets -d study_sheets"
           --health-interval=5s --health-timeout=5s --health-retries=20
     env:
-      DATABASE_URL: mysql+pymysql://study_sheets:study_sheets_dev@127.0.0.1:3306/study_sheets
+      DATABASE_URL: postgresql+psycopg://study_sheets:study_sheets_dev@127.0.0.1:5432/study_sheets
+      PROGRESS_TEST_DATABASE_URL: postgresql+psycopg://study_sheets:study_sheets_dev@127.0.0.1:5432/study_sheets
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
