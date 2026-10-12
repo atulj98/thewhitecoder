@@ -16,6 +16,11 @@ class Settings(BaseSettings):
     cookie_secure: bool = True
     session_days: int = 7
 
+    @field_validator("google_client_id")
+    @classmethod
+    def clean_google_client_id(cls, value: str) -> str:
+        return value.strip()
+
     @field_validator("database_url", mode="before")
     @classmethod
     def use_psycopg_for_postgresql(cls, value: str) -> str:

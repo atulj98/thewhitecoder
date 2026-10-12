@@ -4,6 +4,7 @@ import {
   accountRequest,
   accountsEnabled,
   ApiError,
+  googleClientId,
   useAccount,
   type Account,
 } from "../api/account";
@@ -84,7 +85,7 @@ export default function AccountControls() {
       .then(([google, challenge]) => {
         if (!active || !target) return;
         google.initialize({
-          client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
+          client_id: googleClientId,
           nonce: challenge.csrf_token,
           auto_select: false,
           callback: async ({ credential }) => {

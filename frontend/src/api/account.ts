@@ -19,7 +19,10 @@ export interface Progress {
   entries: QuestionEntry[];
 }
 
-export const accountsEnabled = Boolean(import.meta.env.VITE_GOOGLE_CLIENT_ID);
+export const googleClientId = (
+  import.meta.env.VITE_GOOGLE_CLIENT_ID ?? ""
+).trim();
+export const accountsEnabled = Boolean(googleClientId);
 const base = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
 
 export class ApiError extends Error {
