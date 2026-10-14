@@ -362,9 +362,6 @@ export default function SheetPage() {
                                     <label className="topic-completion">
                                       <CompletionCheckbox
                                         checked={done === questions.length}
-                                        partial={
-                                          done > 0 && done < questions.length
-                                        }
                                         disabled={!tracking.canEdit}
                                         label={
                                           "Mark all questions in " +

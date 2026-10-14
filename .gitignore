@@ -14,3 +14,8 @@ frontend/.env
 frontend/.env.*
 !frontend/.env.example
 content/drafts/*.json
+
+# Archive metadata and generated TypeScript build state
+__MACOSX/
+._*
+*.tsbuildinfo
