@@ -10,6 +10,11 @@ The light palette uses a `#F5F5F5` page, white panels, `#161616` text, and
 `#F4F4F5` text/actions, and soft grey secondary text. Error messages retain
 their existing semantic warning colour.
 
+The current logo lives in `frontend/src/assets/logo.svg`. The header and favicon
+use Vite's versioned asset URLs so a new logo is not hidden by a returning
+visitor's cache. `frontend/public/logo.svg` remains available for previously
+cached releases.
+
 ## Apply once
 
 Download `The_White_Coder_Monochrome.patch` into Downloads. From anywhere inside
