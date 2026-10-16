@@ -99,6 +99,7 @@ export default function AccountControls() {
                 challenge.csrf_token,
               );
               client.removeQueries({ queryKey: ["progress"] });
+              client.removeQueries({ queryKey: ["question-notes"] });
               client.setQueryData(["account"], result);
               setOpen(false);
             } catch (failure) {
@@ -151,6 +152,7 @@ export default function AccountControls() {
     onSuccess: () => {
       window.google?.accounts.id.disableAutoSelect();
       client.removeQueries({ queryKey: ["progress"] });
+      client.removeQueries({ queryKey: ["question-notes"] });
       client.setQueryData(["account"], null);
     },
   });

@@ -4,13 +4,17 @@ A public, step-by-step learning hub for **DSA, Computer Networks, Operating Syst
 
 ## Stack
 
+The new Learning Workspace adds topic navigation, sheet-wide search, progress
+filters, Continue learning, and private notes beside the selected question.
+Follow [the local review guide](docs/learning-workspace.md) before deploying it.
+
 - Frontend: React, TypeScript, Vite, React Router, TanStack Query, Tailwind CSS
 - Backend: FastAPI, Pydantic, SQLAlchemy, Alembic, psycopg, google-auth
 - Database: PostgreSQL 17
 
 ## Prerequisites
 
-- Node.js 20.19+ or 22.12+ (Node 24 is also suitable for this Vite release)
+- Node.js 24 recommended (the frontend test tooling requires Node.js 22.12+)
 - Python 3.11+
 - Docker Desktop with Compose, **or** a local PostgreSQL 17 server configured with the database and user in `docker-compose.yml`
 

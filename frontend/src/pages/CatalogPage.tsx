@@ -15,7 +15,6 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getSheets } from "../api/sheets";
-import { scrollToSheets } from "../lib/scroll";
 
 const visuals: Record<
   string,
@@ -54,13 +53,9 @@ export default function CatalogPage() {
               toward confident problem solving. One topic at a time, at your
               pace.
             </p>
-            <button
-              className="primary-button"
-              type="button"
-              onClick={scrollToSheets}
-            >
-              Explore the DSA sheet <ArrowRight size={18} />
-            </button>
+            <Link className="primary-button" to="/sheets/dsa">
+              Open learning workspace <ArrowRight size={18} />
+            </Link>
             <span className="hero-footnote">
               Free to explore · Built for steady progress
             </span>
@@ -183,7 +178,9 @@ export default function CatalogPage() {
                         <h3>{sheet.title}</h3>
                         <p>{sheet.description}</p>
                         <div className="sheet-card-bottom">
-                          <span className="status-ready">Open the roadmap</span>
+                          <span className="status-ready">
+                            Open learning workspace
+                          </span>
                           <span className="card-arrow">
                             <ArrowRight size={19} />
                           </span>

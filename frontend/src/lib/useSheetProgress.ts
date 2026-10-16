@@ -5,6 +5,7 @@ import {
   progressPath,
   questionKey,
   useAccount,
+  type Account,
   type Progress,
 } from "../api/account";
 import type { SheetDetail } from "../api/sheets";
@@ -16,7 +17,8 @@ export function useSheetProgress(slug: string, sheet: SheetDetail | undefined) {
   const key = ["progress", user?.id, slug];
   const progress = useQuery({
     queryKey: key,
-    queryFn: () => accountRequest<Progress>(progressPath(slug)),
+    queryFn: ({ signal }) =>
+      accountRequest<Progress>(progressPath(slug), { signal }),
     enabled: Boolean(user && sheet?.is_published && !account.isError),
     retry: false,
   });
@@ -52,8 +54,12 @@ export function useSheetProgress(slug: string, sheet: SheetDetail | undefined) {
       item?: string;
       completed?: boolean;
       notes?: string;
-    }) =>
-      accountRequest<Progress>(
+    }) => {
+      // Capture ownership before the request; the active account can change
+      // while it is in flight.
+      const owner = user?.id;
+      const cacheKey = ["progress", owner, slug];
+      return accountRequest<Progress>(
         update.item
           ? progressPath(
               slug,
@@ -72,8 +78,16 @@ export function useSheetProgress(slug: string, sheet: SheetDetail | undefined) {
           ),
         },
         account.data?.csrf_token,
-      ),
-    onSuccess: (result) => client.setQueryData(key, result),
+      ).then((result) => ({ result, owner, cacheKey }));
+    },
+    onSuccess: (result) => {
+      if (
+        client.getQueryData<Account | null>(["account"])?.user.id ===
+        result.owner
+      ) {
+        client.setQueryData(result.cacheKey, result.result);
+      }
+    },
     onError: (error) => {
       if (error instanceof ApiError && error.status === 401) {
         void client.invalidateQueries({ queryKey: ["account"] });
@@ -96,3 +110,5 @@ export function useSheetProgress(slug: string, sheet: SheetDetail | undefined) {
     ),
   };
 }
+
+export type SheetTracking = ReturnType<typeof useSheetProgress>;

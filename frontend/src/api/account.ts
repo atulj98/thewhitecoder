@@ -42,7 +42,9 @@ export async function accountRequest<T>(
   try {
     response = await fetch(base + "/api/v1" + path, {
       ...options,
-      signal: options.signal ?? AbortSignal.timeout(15000),
+      signal: options.signal
+        ? AbortSignal.any([options.signal, AbortSignal.timeout(15000)])
+        : AbortSignal.timeout(15000),
       credentials: "include",
       headers: {
         "Content-Type": "application/json",
