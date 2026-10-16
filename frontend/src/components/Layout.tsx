@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import AccountControls from "./AccountControls";
 import { scrollToSheets } from "../lib/scroll";
+import logoUrl from "../assets/logo.svg";
 
 function ScrollToTop() {
   const { pathname, state } = useLocation();
@@ -32,12 +33,7 @@ export default function Layout() {
         <div className="container header-inner">
           <Link className="brand" to="/" aria-label="The White Coder home">
             <span className="brand-mark" aria-hidden="true">
-              <img
-                src={`${import.meta.env.BASE_URL}logo.svg`}
-                alt=""
-                width="42"
-                height="42"
-              />
+              <img src={logoUrl} alt="" width="42" height="42" />
             </span>
             <span className="brand-wordmark">
               <span className="brand-name">
