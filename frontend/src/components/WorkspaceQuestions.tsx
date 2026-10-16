@@ -2,8 +2,10 @@ import { ArrowUpRight, FilePenLine } from "lucide-react";
 import CompletionCheckbox from "./CompletionCheckbox";
 import { platformName, type WorkspaceQuestion } from "../lib/workspace";
 import type { SheetTracking } from "../lib/useSheetProgress";
+import { getProgrammingLesson } from "../learning/lessons";
 
 export default function WorkspaceQuestions({
+  slug,
   visible,
   selected,
   ready,
@@ -11,8 +13,10 @@ export default function WorkspaceQuestions({
   searching,
   drafts,
   onSelect,
+  onLearn,
   onFocusNotes,
 }: {
+  slug: string;
   visible: WorkspaceQuestion[];
   selected: WorkspaceQuestion | undefined;
   ready: boolean;
@@ -20,6 +24,7 @@ export default function WorkspaceQuestions({
   searching: boolean;
   drafts: Record<string, string>;
   onSelect: (question: WorkspaceQuestion) => void;
+  onLearn: (question: WorkspaceQuestion) => void;
   onFocusNotes: (question: WorkspaceQuestion) => void;
 }) {
   return (
@@ -64,7 +69,19 @@ export default function WorkspaceQuestions({
             <div className="workspace-question-actions">
               <span className="workspace-content-link">
                 Content{" "}
-                {question.item.content_url ? (
+                {getProgrammingLesson(
+                  slug,
+                  question.step.stable_key,
+                  question.topic.stable_key,
+                ) ? (
+                  <button
+                    className="workspace-content-read"
+                    aria-label={`Read lesson for ${question.topic.title}`}
+                    onClick={() => onLearn(question)}
+                  >
+                    Learn
+                  </button>
+                ) : question.item.content_url ? (
                   <a
                     href={question.item.content_url}
                     target="_blank"
