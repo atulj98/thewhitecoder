@@ -25,6 +25,9 @@ import CompletionCheckbox from "./CompletionCheckbox";
 import NotesPanel from "./NotesPanel";
 import RoadmapStep from "./WorkspaceRoadmapStep";
 import WorkspaceQuestions from "./WorkspaceQuestions";
+import { getProgrammingLesson } from "../learning/lessons";
+import LessonArticle from "../learning/LessonArticle";
+import LessonLab from "../learning/LessonLab";
 import "../workspace.css";
 
 export default function LearningWorkspace({
@@ -62,6 +65,22 @@ export default function LearningWorkspace({
     !tracking.progress.isError,
   );
   const searching = Boolean(search.trim());
+  const lesson = getProgrammingLesson(
+    sheet.slug,
+    current?.step.stable_key ?? "",
+    current?.topic.stable_key ?? "",
+  );
+  const requestedView = params.get("view");
+  const view =
+    !lesson || searching
+      ? "practice"
+      : requestedView === "learn" ||
+          requestedView === "visualize" ||
+          requestedView === "practice"
+        ? requestedView
+        : params.has("question")
+          ? "practice"
+          : "learn";
   const visible = filterQuestions(
     searching ? questions : (current?.questions ?? []),
     search,
@@ -93,8 +112,13 @@ export default function LearningWorkspace({
     const value = new URLSearchParams(params);
     value.set("step", context.step.stable_key);
     value.set("topic", context.topic.stable_key);
-    if (question) value.set("question", question.item.stable_key);
-    else value.delete("question");
+    if (question) {
+      value.set("question", question.item.stable_key);
+      value.set("view", "practice");
+    } else {
+      value.delete("question");
+      value.delete("view");
+    }
     setParams(value, { preventScrollReset: true });
     setNavOpen(false);
     setNotesFocusKey(null);
@@ -106,6 +130,18 @@ export default function LearningWorkspace({
         candidate.topic.stable_key === question.topic.stable_key,
     )!;
     navigate(context, question);
+  }
+  function showView(nextView: "learn" | "visualize" | "practice") {
+    const value = new URLSearchParams(params);
+    value.set("step", current.step.stable_key);
+    value.set("topic", current.topic.stable_key);
+    value.set("view", nextView);
+    setParams(value, { preventScrollReset: true });
+    setSearch("");
+    requestAnimationFrame(() => {
+      mainHeading.current?.focus({ preventScroll: true });
+      mainHeading.current?.scrollIntoView?.({ block: "start" });
+    });
   }
   function setDraft(
     key: string,
@@ -145,9 +181,11 @@ export default function LearningWorkspace({
             {sheet.slug.toUpperCase()} / ONE STEP AT A TIME
           </span>
           <h1>
-            {ready && totalDone === questions.length
-              ? "Look how far you've come."
-              : "Pick up your next question."}
+            {lesson && view !== "practice"
+              ? "Build your programming foundations."
+              : ready && totalDone === questions.length
+                ? "Look how far you've come."
+                : "Pick up your next question."}
           </h1>
           <p>{sheet.description} Your own pace, your own progress.</p>
         </div>
@@ -158,7 +196,21 @@ export default function LearningWorkspace({
             if (next) {
               setSearch("");
               setFilter("all");
-              selectQuestion(next);
+              const context = contexts.find((candidate) =>
+                candidate.questions.some(
+                  (question) => question.key === next.key,
+                ),
+              )!;
+              if (
+                !ready &&
+                getProgrammingLesson(
+                  sheet.slug,
+                  context.step.stable_key,
+                  context.topic.stable_key,
+                )
+              )
+                navigate(context);
+              else selectQuestion(next);
               requestAnimationFrame(() =>
                 mainHeading.current?.focus({ preventScroll: true }),
               );
@@ -230,7 +282,9 @@ export default function LearningWorkspace({
           </span>
         )}
       </div>
-      <div className="workspace-layout">
+      <div
+        className={`workspace-layout ${view !== "practice" ? "has-lesson-view" : ""}`}
+      >
         <aside
           className={`workspace-roadmap ${navOpen ? "is-open" : ""}`}
           aria-label="Topic navigation"
@@ -301,34 +355,61 @@ export default function LearningWorkspace({
                   />
                 )}
               </div>
-              {current.topic.items.filter((item) => item.kind !== "practice")
-                .length > 0 && (
-                <details className="workspace-study-focus">
-                  <summary>
-                    <BookOpen size={15} /> Study focus & resources{" "}
-                    <ChevronDown size={15} />
-                  </summary>
-                  <ul>
-                    {current.topic.items
-                      .filter((item) => item.kind !== "practice")
-                      .map((item) => (
-                        <li key={item.stable_key}>
-                          {item.title}
-                          {(item.content_url || item.source_url) && (
-                            <a
-                              href={item.content_url || item.source_url!}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Read <ArrowUpRight size={13} />
-                            </a>
-                          )}
-                        </li>
-                      ))}
-                  </ul>
-                </details>
-              )}
+              {!lesson &&
+                current.topic.items.filter((item) => item.kind !== "practice")
+                  .length > 0 && (
+                  <details className="workspace-study-focus">
+                    <summary>
+                      <BookOpen size={15} /> Study focus & resources{" "}
+                      <ChevronDown size={15} />
+                    </summary>
+                    <ul>
+                      {current.topic.items
+                        .filter((item) => item.kind !== "practice")
+                        .map((item) => (
+                          <li key={item.stable_key}>
+                            {item.title}
+                            {(item.content_url || item.source_url) && (
+                              <a
+                                href={item.content_url || item.source_url!}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                Read <ArrowUpRight size={13} />
+                              </a>
+                            )}
+                          </li>
+                        ))}
+                    </ul>
+                  </details>
+                )}
             </>
+          )}
+          {lesson && !searching && (
+            <div
+              className="lesson-view-switch"
+              role="group"
+              aria-label="Subtopic learning views"
+            >
+              <button
+                aria-pressed={view === "learn"}
+                onClick={() => showView("learn")}
+              >
+                Learn
+              </button>
+              <button
+                aria-pressed={view === "visualize"}
+                onClick={() => showView("visualize")}
+              >
+                Visualize
+              </button>
+              <button
+                aria-pressed={view === "practice"}
+                onClick={() => showView("practice")}
+              >
+                Practice ({current.questions.length})
+              </button>
+            </div>
           )}
           <div className="workspace-tools">
             <label className="workspace-search">
@@ -346,95 +427,130 @@ export default function LearningWorkspace({
                 </button>
               )}
             </label>
-            <div className="workspace-filters" aria-label="Question filters">
-              {(
-                [
-                  ["all", "All"],
-                  ["unsolved", "Unsolved"],
-                  ["solved", "Solved"],
-                  ["notes", "Has notes"],
-                ] as const
-              ).map(([value, label]) => (
-                <button
-                  key={value}
-                  aria-pressed={(ready ? filter : "all") === value}
-                  disabled={value !== "all" && !ready}
-                  title={
-                    value !== "all" && !ready
-                      ? "Sign in to filter your progress"
-                      : undefined
-                  }
-                  onClick={() => setFilter(value)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="workspace-list-meta">
-            <span>
-              {visible.length} {visible.length === 1 ? "question" : "questions"}
-              {searching ? " found" : " shown"}
-            </span>
-            {!searching && current.questions.length > 0 && (
-              <label className="workspace-mark-all">
-                <CompletionCheckbox
-                  checked={ready && topicDone === current.questions.length}
-                  disabled={!tracking.canEdit}
-                  label={`Mark all ${current.questions.length} questions in ${current.topic.title} complete`}
-                  onChange={(completed) =>
-                    tracking.change.mutate({
-                      step: current.step.stable_key,
-                      topic: current.topic.stable_key,
-                      completed,
-                    })
-                  }
-                />
-                <span>
-                  Mark subtopic done
-                  <small>All {current.questions.length} questions</small>
-                </span>
-              </label>
+            {view === "practice" && (
+              <div className="workspace-filters" aria-label="Question filters">
+                {(
+                  [
+                    ["all", "All"],
+                    ["unsolved", "Unsolved"],
+                    ["solved", "Solved"],
+                    ["notes", "Has notes"],
+                  ] as const
+                ).map(([value, label]) => (
+                  <button
+                    key={value}
+                    aria-pressed={(ready ? filter : "all") === value}
+                    disabled={value !== "all" && !ready}
+                    title={
+                      value !== "all" && !ready
+                        ? "Sign in to filter your progress"
+                        : undefined
+                    }
+                    onClick={() => setFilter(value)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             )}
           </div>
-          <WorkspaceQuestions
-            visible={visible}
-            selected={selected}
-            ready={ready}
-            tracking={tracking}
-            searching={searching}
-            drafts={drafts}
-            onSelect={selectQuestion}
-            onFocusNotes={(question) => {
-              selectQuestion(question);
-              setNotesFocusKey(question.key);
-            }}
-          />
-          {!visible.length && (
-            <div className="workspace-no-results">
-              <Search size={23} />
-              <h3>
-                {searching || filter !== "all"
-                  ? "No matching questions."
-                  : "No practice questions in this subtopic yet."}
-              </h3>
-              <p>
-                {searching || filter !== "all"
-                  ? "Try another search or show all questions."
-                  : "Explore the study focus or choose another subtopic."}
-              </p>
-              {(searching || filter !== "all") && (
-                <button
-                  className="text-button"
-                  onClick={() => {
-                    setSearch("");
-                    setFilter("all");
-                  }}
-                >
-                  Reset search & filters
-                </button>
+          {lesson && view === "learn" && (
+            <LessonArticle
+              key={current.key}
+              lesson={lesson}
+              onVisualize={() => showView("visualize")}
+            />
+          )}
+          {lesson && view === "visualize" && (
+            <LessonLab
+              key={current.key}
+              lesson={lesson}
+              onPractice={() => showView("practice")}
+            />
+          )}
+          {view === "practice" && (
+            <>
+              <div className="workspace-list-meta">
+                <span>
+                  {visible.length}{" "}
+                  {visible.length === 1 ? "question" : "questions"}
+                  {searching ? " found" : " shown"}
+                </span>
+                {!searching && current.questions.length > 0 && (
+                  <label className="workspace-mark-all">
+                    <CompletionCheckbox
+                      checked={ready && topicDone === current.questions.length}
+                      disabled={!tracking.canEdit}
+                      label={`Mark all ${current.questions.length} questions in ${current.topic.title} complete`}
+                      onChange={(completed) =>
+                        tracking.change.mutate({
+                          step: current.step.stable_key,
+                          topic: current.topic.stable_key,
+                          completed,
+                        })
+                      }
+                    />
+                    <span>
+                      Mark subtopic done
+                      <small>All {current.questions.length} questions</small>
+                    </span>
+                  </label>
+                )}
+              </div>
+              <WorkspaceQuestions
+                slug={sheet.slug}
+                visible={visible}
+                selected={selected}
+                ready={ready}
+                tracking={tracking}
+                searching={searching}
+                drafts={drafts}
+                onSelect={selectQuestion}
+                onLearn={(question) => {
+                  const context = contexts.find(
+                    (candidate) =>
+                      candidate.step.stable_key === question.step.stable_key &&
+                      candidate.topic.stable_key === question.topic.stable_key,
+                  )!;
+                  setSearch("");
+                  navigate(context);
+                  requestAnimationFrame(() => {
+                    mainHeading.current?.focus({ preventScroll: true });
+                    mainHeading.current?.scrollIntoView?.({ block: "start" });
+                  });
+                }}
+                onFocusNotes={(question) => {
+                  selectQuestion(question);
+                  setNotesFocusKey(question.key);
+                }}
+              />
+              {!visible.length && (
+                <div className="workspace-no-results">
+                  <Search size={23} />
+                  <h3>
+                    {searching || filter !== "all"
+                      ? "No matching questions."
+                      : "No practice questions in this subtopic yet."}
+                  </h3>
+                  <p>
+                    {searching || filter !== "all"
+                      ? "Try another search or show all questions."
+                      : "Explore the study focus or choose another subtopic."}
+                  </p>
+                  {(searching || filter !== "all") && (
+                    <button
+                      className="text-button"
+                      onClick={() => {
+                        setSearch("");
+                        setFilter("all");
+                      }}
+                    >
+                      Reset search & filters
+                    </button>
+                  )}
+                </div>
               )}
-            </div>
+            </>
           )}
           <div className="workspace-topic-footer">
             <span>
@@ -456,15 +572,17 @@ export default function LearningWorkspace({
             )}
           </div>
         </div>
-        <NotesPanel
-          key={selected?.key ?? "empty"}
-          slug={sheet.slug}
-          question={selected}
-          tracking={tracking}
-          draft={selected ? drafts[selected.key] : undefined}
-          setDraft={setDraft}
-          focusRequested={notesFocusKey === selected?.key}
-        />
+        {view === "practice" && (
+          <NotesPanel
+            key={selected?.key ?? "empty"}
+            slug={sheet.slug}
+            question={selected}
+            tracking={tracking}
+            draft={selected ? drafts[selected.key] : undefined}
+            setDraft={setDraft}
+            focusRequested={notesFocusKey === selected?.key}
+          />
+        )}
       </div>
     </section>
   );
