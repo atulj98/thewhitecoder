@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <title>The White Coder</title>
-  <rect width="64" height="64" rx="17" fill="#152136"/>
-  <path d="m12 23 9 9-9 9" stroke="#68E4BB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="m27 21 4 22 7-15 7 15 5-22" stroke="#EEF3FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M49 49h7" stroke="#68E4BB" stroke-width="3" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="17" fill="#171719" stroke="#45454C" stroke-width="0.8"/>
+  <path d="m12 23 9 9-9 9" stroke="#F4F4F5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m27 21 4 22 7-15 7 15 5-22" stroke="#F4F4F5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M49 49h7" stroke="#F4F4F5" stroke-width="3" stroke-linecap="round"/>
 </svg>

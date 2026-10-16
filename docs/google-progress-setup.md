@@ -9,7 +9,8 @@ topic completion, and private notes. The public sheet remains available to guest
 - Sign in with Google creates an account on the first successful sign-in.
 - A completed question increments the count, for example **1/241**. Unchecking it decrements it.
 - Topic completion checks all practice questions in that topic in one transaction.
-  A partially completed topic shows a mixed checkbox state.
+  The subtopic checkbox stays unchecked until every question is completed;
+  partial completion is shown by the count.
 - Notes belong to one student's account and one question. They are plain text,
   limited to 10,000 characters, and saved with **Save notes**.
 - Completing or clearing a topic preserves existing notes.
